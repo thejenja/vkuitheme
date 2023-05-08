@@ -1,0 +1,9 @@
+id: vkui
+version: "0.0.1.0"
+openvk_version: 0
+enabled: 1
+metadata:
+    name:
+        _: "VKUI"
+    author: "thejenja_"
+    description: "VK-stylized theme by 2023 era"
