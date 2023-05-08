@@ -11,6 +11,7 @@ body {
     color: #e1e3e6;
     font-family: "Inter",-apple-system,BlinkMacSystemFont,"Roboto","Helvetica Neue",Geneva,arial,Tahoma,verdana,sans-serif;
     line-height: 1.154;
+    font-size: 13px !important;
     font-weight: 400;
     background: #141414 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAwAQMAAAAByjnBAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFIiIiKSkpb1F8ywAAAA1JREFUeJxjYKApOAAAASAAwSaHGcAAAAAASUVORK5CYII=) repeat-x!important
 }
@@ -303,12 +304,13 @@ a {
 }
 
 object {
+    display: flex;
     margin-left: auto;
-    margin-right: 15px
+    margin-right: 10px
 }
 
 object>a {
-    padding: 5px;
+    padding: 5px 7px;
     background-color: #656565;
     font-size: 11px;
     font-weight: 700;
@@ -608,10 +610,12 @@ body.scrolled .toTop:hover {
     padding-top: 0
 }
 
-h1,h2,p,small,span {
+h1,h2,p,small,span, label {
     color: #e1e3e6!important
 }
-
+p, span, label, td{
+    font-size: 12px;
+}
 .ovk-video>.preview,.video-preview {
     width: auto;
     height: auto;
@@ -688,4 +692,78 @@ div[style="padding: 5px 8px 15px 8px;"] {
     background-color: transparent;
     color: #71aaeb;
     margin-right: 15px;
+}
+.post-online {
+    font-size: 0;
+}
+.post-online:after{
+    border-radius: 100px;
+    border: 5px solid #222;
+    position: absolute;
+    content: url("data:image/svg+xml,%3Csvg fill='none' height='12' viewBox='0 0 12 12' width='12' xmlns='http://www.w3.org/2000/svg' style='%0A'%3E%3Cpath d='M10 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0z' fill='%234bb34b'%3E%3C/path%3E%3C/svg%3E");
+    margin-left: 10px;
+    margin-top: -20px;
+}
+.name-checkmark, .post-author .name-checkmark{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%235d9be6' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M16.659 5.344a1.162 1.162 0 0 1 0 1.645L8.82 14.812a1.167 1.167 0 0 1-1.649 0l-3.83-3.823a1.162 1.162 0 0 1 0-1.646 1.167 1.167 0 0 1 1.648 0l3.007 3 7.013-7a1.167 1.167 0 0 1 1.649 0Z' clip-rule='evenodd'/%3E%3C/svg%3E") !important;
+    margin-left: -1px;
+    margin-bottom: -4px;
+
+}
+.content .name-checkmark{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%235d9be6' viewBox='0 0 12 12'%3E%3Cpath d='M4.5 7.65 2.625 5.775a.742.742 0 1 0-1.05 1.05L3.97 9.22a.75.75 0 0 0 1.06 0l5.695-5.695a.743.743 0 0 0-1.05-1.05L4.5 7.65Z'/%3E%3C/svg%3E");
+    margin-bottom: -2px;
+    margin-left: 1px;
+}
+.expand_button{
+    background-color: transparent;
+}
+.expand_button:hover {
+    background-color: rgba(255,255,255,.08);
+}
+body.dimmed > .dimmer{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.40);;
+}
+.ovk-diag-cont {
+    background-color: transparent;
+}
+.ovk-diag {
+    background-color: #292929;
+    border: 0;
+    border-radius: 12px;
+}
+.ovk-diag-head {
+    display: flex;
+    height: 54px;
+    background-color: #292929;
+    border-bottom: 1px solid #424242;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 12px 12px 0 0;
+    align-items: center;
+    padding-left: 25px;
+}
+.ovk-diag-action {
+    padding: 10px;
+    height: 54px;
+    background-color: transparent;
+    border-radius: 0 0 12px 12px;
+}
+.messagebox-content-header {
+    background: #333;
+}
+.msg.msg_succ {
+    border-color: #3b584f;
+    background-color: #ddf3d7;
+}
+
+.msg {
+    font-size: 13px;
+    border-radius: 4px;
+    width: 70%;
+    padding: 15px;
+    margin-bottom: 0;
+    border: 0;
+    background-color: rgba(75, 179, 75, 0.16) !important;
 }
