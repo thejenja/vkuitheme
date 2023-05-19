@@ -979,3 +979,35 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
     border-top: 0;
     color: #eaeaea;
 }
+.avatarDelete {
+    right: 10px;
+}
+.avatar_variants {
+    width: 223px;
+    margin-bottom: 13px !important;
+}
+.groups_options {
+    border-top: #424242 solid 1px;
+}
+.container_gray .contentEx {
+    background-color: transparent;
+    border: 0;
+}
+.searchOptions {
+    background-color: transparent;
+}
+.album-photo img {
+    border: 0;
+    background-color: transparent;
+}
+.paginator a {
+    border-radius: 4px;
+    display: inline-block;
+    padding: 4px 7px;
+}
+.paginator a.active {
+    color: #e1e3e6;
+    background-color: rgba(255,255,255,.16);
+    font-weight: bold;
+}
+
