@@ -58,7 +58,7 @@ body {
     border-radius: 4px
 }
 
-#wallAttachmentMenu>.header,.content>table td[width="120"],a.link.edit-button, div.left_small_block > br, div.left_small_block > br, #votesBalance,.floating_sidebar, .summaryBar {
+#wallAttachmentMenu>.header,.content>table td[width="120"],a.link.edit-button, div.left_small_block > br, div.left_small_block > br, #votesBalance,.floating_sidebar.show, .summaryBar {
     display: none
 }
 
@@ -429,9 +429,7 @@ input[type~=search] {
     background-color: #222;
     color: #b2b2b2
 }
-
-.commentsTextFieldWrap {
-    padding: 0;
+#standaloneCommentBox, .commentsTextFieldWrap {
     background-color: transparent !important;
     border: 0 !important
 }
@@ -1010,4 +1008,3 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
     background-color: rgba(255,255,255,.16);
     font-weight: bold;
 }
-
