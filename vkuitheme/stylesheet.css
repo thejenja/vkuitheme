@@ -1073,13 +1073,12 @@ button[style="height: 22px; width: 104px;"]{
     width: 245px;
     margin-bottom: 3px !important;
 }
+.tippy-box[data-theme~=light][data-placement^=bottom]>.tippy-arrow:before {
+    border-bottom-color: #333;
+}
 @media (prefers-color-scheme: light){
     body {
-    color: #e1e3e6;
-    font-family: "Inter",-apple-system,BlinkMacSystemFont,"Roboto","Helvetica Neue",Geneva,arial,Tahoma,verdana,sans-serif;
-    line-height: 1.154;
-    font-size: 13px !important;
-    font-weight: 400;
+    color: #000;
     background: #edeef0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAwAQMAAAAByjnBAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRF////5+jsxnTC7AAAAA1JREFUeJxjYKApOAAAASAAwSaHGcAAAAAASUVORK5CYII=) repeat-x!important
 }
 .page_body {
@@ -1110,16 +1109,16 @@ button[style="height: 22px; width: 104px;"]{
     border: 1px solid #dce1e6
 }
 #backdropDripper {
-    background-color: #222;
-    box-shadow: -30px 0 20px 20px #222,-50px 0 20px 20px hsl(0deg 0% 13%/59%),-70px 0 20px 20px hsl(0deg 0% 13%/43%),-90px 0 20px 20px hsl(0deg 0% 13%/35%),-110px 0 20px 20px hsl(0deg 0% 13%/28%),-130px 0 20px 20px hsl(0deg 0% 13%/16%),30px 0 20px 20px #222,50px 0 20px 20px hsl(0deg 0% 13%/59%),70px 0 20px 20px hsl(0deg 0% 13%/43%),90px 0 20px 20px hsl(0deg 0% 13%/35%),110px 0 20px 20px hsl(0deg 0% 13%/28%),130px 0 20px 20px hsl(0deg 0% 13%/16%)
+    background-color: #edeef0;
+    box-shadow: -30px 0 20px 20px #edeef0,-50px 0 20px 20px hsl(0deg 0% 13%/59%),-70px 0 20px 20px hsl(0deg 0% 13%/43%),-90px 0 20px 20px hsl(0deg 0% 13%/35%),-110px 0 20px 20px hsl(0deg 0% 13%/28%),-130px 0 20px 20px hsl(0deg 0% 13%/16%),30px 0 20px 20px #edeef0,50px 0 20px 20px hsl(0deg 0% 13%/59%),70px 0 20px 20px hsl(0deg 0% 13%/43%),90px 0 20px 20px hsl(0deg 0% 13%/35%),110px 0 20px 20px hsl(0deg 0% 13%/28%),130px 0 20px 20px hsl(0deg 0% 13%/16%)
 }
 .container_gray {
-    background: #222;
+    background: #fff;
 }
 .expanded-textarea {
-    border: 1px solid #555;
-    background-color: #222;
-    color: #b2b2b2
+    border: 1px solid #dce1e6;
+    background-color: #fff;
+    color: #000
 }
 .postFeedWrapper {
     background-color: #fff;
