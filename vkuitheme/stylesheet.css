@@ -145,15 +145,18 @@ img[src="/assets/packages/static/openvk/img/oxygen-icons/16x16/actions/office-ch
     font-size: 13px!important;
     outline: 0;
     white-space: nowrap;
-    background: #e1e3e6;
     background-position: 0-16px;
-    color: #222;
+    background: hsla(0,0%,100%,.1); 
+    color: #fff;
     text-shadow: none;
     cursor: pointer;
     text-decoration: none
 }
-
-.button:hover {
+.button[type="submit"]{
+    background: #e1e3e6;
+    color: #222;
+}
+.button[type="submit"]:hover {
     color: #222;
     opacity: .88
 }
@@ -1048,4 +1051,126 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
+}
+.page_status_popup {
+    border: 1px solid #424242;
+    background-color: #222;
+    padding: 12px;
+    margin-top: 30px;
+    border-radius: 14px;
+}
+button[style="height: 22px; width: 104px;"]{
+    height: auto !important;
+    width: auto !important
+}
+.left_big_block .content_title_expanded, .right_small_block .content_title_expanded{
+    margin-top: 6px !important;
+}
+.right_small_block .avatarDelete{
+    right: 0px;
+}
+.right_small_block .avatar_variants{
+    width: 245px;
+    margin-bottom: 3px !important;
+}
+@media (prefers-color-scheme: light){
+    body {
+    color: #e1e3e6;
+    font-family: "Inter",-apple-system,BlinkMacSystemFont,"Roboto","Helvetica Neue",Geneva,arial,Tahoma,verdana,sans-serif;
+    line-height: 1.154;
+    font-size: 13px !important;
+    font-weight: 400;
+    background: #edeef0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAwAQMAAAAByjnBAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRF////5+jsxnTC7AAAAA1JREFUeJxjYKApOAAAASAAwSaHGcAAAAAASUVORK5CYII=) repeat-x!important
+}
+.page_body {
+    background-color: #fff;
+    border: 1px solid #dce1e6;
+}
+    h1,h2,p,small,span, label, div, #wallAttachmentMenu>a, .navigation .link {
+    color: #000000!important
+}
+    input[type~=search] {
+    color: #000;
+    background-color: #edeef0!important;
+    border: 0;
+    background: #edeef0 url(data:image/svg+xml,%3Csvg fill='none' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.50006 1c3.03759 0 5.50004 2.46256 5.50004 5.50029 0 1.24839-.4159 2.39964-1.1166 3.32275l3.8956 3.90026c.2927.2931.2924.768-.0006 1.0607-.2931.2927-.768.2924-1.0607-.0006l-3.89514-3.8995c-.92307.7008-2.07427 1.1167-3.3226 1.1167-3.0376 0-5.50006-2.46258-5.50006-5.50031s2.46246-5.50029 5.50006-5.50029zm0 1.5c-2.20916 0-4.00006 1.79098-4.00006 4.00029 0 2.20932 1.7909 4.00031 4.00006 4.00031 2.20915 0 4.00004-1.79099 4.00004-4.00031 0-2.20931-1.79089-4.00029-4.00004-4.00029z' fill='%23757575'/%3E%3C/svg%3E)no-repeat 8px 7px!important;
+}
+    a {
+    color: #2A5885;
+}
+    .button[type="submit"]{
+    background: #e1e3e6;
+    color: #222;
+}
+.button[type="submit"]:hover {
+    color: #222;
+}
+.left_small_block>div,.right_big_block>div {
+    background-color: #222;
+    border: 1px solid #dce1e6
+}
+#backdropDripper {
+    background-color: #222;
+    box-shadow: -30px 0 20px 20px #222,-50px 0 20px 20px hsl(0deg 0% 13%/59%),-70px 0 20px 20px hsl(0deg 0% 13%/43%),-90px 0 20px 20px hsl(0deg 0% 13%/35%),-110px 0 20px 20px hsl(0deg 0% 13%/28%),-130px 0 20px 20px hsl(0deg 0% 13%/16%),30px 0 20px 20px #222,50px 0 20px 20px hsl(0deg 0% 13%/59%),70px 0 20px 20px hsl(0deg 0% 13%/43%),90px 0 20px 20px hsl(0deg 0% 13%/35%),110px 0 20px 20px hsl(0deg 0% 13%/28%),130px 0 20px 20px hsl(0deg 0% 13%/16%)
+}
+.container_gray {
+    background: #222;
+}
+.expanded-textarea {
+    border: 1px solid #555;
+    background-color: #222;
+    color: #b2b2b2
+}
+.postFeedWrapper {
+    background-color: #fff;
+    border-bottom: 1px solid #dce1e6 !important;
+}
+.post-online:after{
+    border: 4px solid #fff;
+}
+.button_search {
+    background: #e1e3e6;
+    color: #222;
+}
+.page_status_popup {
+    border: 1px solid #dce1e6;
+    background-color: #fff;
+}
+    .comment, .post-divider {
+    border-color: #dce1e6 !important;
+}
+ input[type=email],input[type=password],input[type=phone],input[type=search],input[type=text],input[type~=email],input[type~=password],input[type~=phone],input[type~=text] {
+    border: 1px solid #dce1e6;
+    background-color: #fff;
+    color: #000
+}
+
+input[type~=date],input[type~=search],select,textarea {
+    border: 1px solid rgba(255,255,255,.16)
+}
+
+input[type~=date],select,textarea {
+     border: 1px solid #dce1e6;
+    background-color: #fff;
+    color: #000
+}
+    .button {
+    background: #e5ebf1; 
+    color: #346297;
+}
+.button[type="submit"]{
+    background: #447bba;
+    color: #fff;
+}
+.button[type="submit"]:hover {
+    color: #fff;
+    opacity: .88
+}
+    .post-like-button,.post-share-button {
+    background-color: #f0f2f5;
+}
+
+.post-like-button:hover,.post-share-button:hover {
+    background-color: #ebedf0 !important
+}
 }
