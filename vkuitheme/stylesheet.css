@@ -142,7 +142,9 @@ img[src="/assets/packages/static/openvk/img/oxygen-icons/16x16/actions/office-ch
 }
 
 .button,input[class=button] {
-    padding: 8px 16px
+    padding: 8px 16px;
+    height: auto !important;
+    width: auto !important;
 }
 
 .button {
@@ -1208,7 +1210,7 @@ button[style="height: 22px; width: 104px;"]{
     a {
     color: #2A5885;
 }
-    .button[type="submit"]{
+.button[type="submit"]{
     background: #e1e3e6;
     color: #222;
 }
@@ -1264,7 +1266,7 @@ input[type~=date],select,textarea {
     background-color: #fff;
     color: #000
 }
-    .button {
+.button {
     background: #e5ebf1; 
     color: #346297;
 }
