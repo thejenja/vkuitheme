@@ -9,7 +9,7 @@
 ### Как установить локально?
 1. Скачайте расширение [Stylus](https://github.com/openstyles/stylus)
 2. Зайдите на сайт OpenVK, нажмите на расширение
-3. Вставьте [код с этого репозитория](https://github.com/thejenja/vkuitheme/blob/main/vkuitheme/stylesheet.css "код с этого репозитория")
+3. Вставьте [код с этого репозитория](https://raw.githubusercontent.com/thejenja/vkuitheme/main/vkuitheme/stylesheet.css "код с этого репозитория")
 4. Выберите внизу
 >  Применить к: URL, начинающимся с https://openvk.su/
 
