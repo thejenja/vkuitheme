@@ -1310,8 +1310,7 @@ grid-row-gap: 0px;
     font-size: 13px;
 }
 .crp-entry--image > img {
-    width: 64px !important;
-    height: 64px;
+    min-width: 64px !important;
 }
 .bsdn_teaserTitleBox{
     display: none;
