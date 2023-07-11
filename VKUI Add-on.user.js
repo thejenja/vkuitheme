@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VKUI Add-on
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  VKUI Add-on for OpenVK
 // @author       thejenja_
 // @match        https://openvk.su/*
@@ -44,7 +44,6 @@
 (function() {
     'use strict';
 
-    // Функция для перемещения элементов в начало контейнера
     function moveElementToStart(element, containerSelector) {
         var container = document.querySelector(containerSelector);
         if (container) {
@@ -52,7 +51,6 @@
         }
     }
 
-    // Перемещение элементов в обратном порядке
     var navigation = document.querySelector('.navigation');
     var elementsToMove = [
         '.link[accesskey="."]',
@@ -63,7 +61,6 @@
         '.link[href^="/albums"]'
     ];
 
-    // Используем reverse() для обратного порядка элементов
     elementsToMove.reverse().forEach(function(selector) {
         var element = navigation.querySelector(selector);
         if (element) {
@@ -75,11 +72,22 @@
 (function() {
     'use strict';
 
-    // замена первого элемента
-    var messengerLink = document.querySelector('.navigation .link[href="/im"]');
+    var messengerLink = document.querySelector('.navigation .link[href^="/im"]');
     if (messengerLink && messengerLink.textContent.includes("Сообщения")) {
-        messengerLink.textContent = "Мессенджер";
+    var objectElement = messengerLink.querySelector('object[type="internal/link"]');
+    var incomingLinkElement = objectElement ? objectElement.querySelector('a') : null;
+    var bElement = incomingLinkElement ? incomingLinkElement.querySelector('b') : null;
+
+    var newText = "Мессенджер";
+    messengerLink.textContent = newText;
+    if (objectElement) {
+        messengerLink.appendChild(objectElement);
     }
+    if (bElement) {
+        bElement.textContent = bElement.textContent.trim();
+    }
+    }
+
     var groupsLink = document.querySelector('.navigation .link[href^="/groups"]');
     if (groupsLink && groupsLink.textContent.includes("Группы")) {
         groupsLink.textContent = "Сообщества";
@@ -88,7 +96,6 @@
     if (videosLink && videosLink.textContent.includes("Видеозаписи")) {
         videosLink.textContent = "Видео";
     }
-    // замена второго элемента
     var servicesLink = document.querySelector('.navigation .link[href="/apps?act=installed"]');
     if (servicesLink && servicesLink.textContent.includes("Приложения")) {
         servicesLink.textContent = "Сервисы";
