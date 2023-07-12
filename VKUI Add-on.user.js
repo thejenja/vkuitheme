@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VKUI Add-on
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  VKUI Add-on for OpenVK
 // @author       thejenja_
 // @match        https://openvk.su/*
@@ -12,7 +12,7 @@
 (function() {
     'use strict';
 
-    let object = document.querySelector("body > div.layout > div.sidebar > div > a:nth-child(3) > object > a");
+    let object = document.querySelector("body > div.layout > div.sidebar div a > object");
     object.innerHTML = object.innerHTML.replace(/\(|\)/g, "");
 })();
 (function() {
@@ -71,23 +71,25 @@
 
 (function() {
     'use strict';
-
     var messengerLink = document.querySelector('.navigation .link[href^="/im"]');
     if (messengerLink && messengerLink.textContent.includes("Сообщения")) {
     var objectElement = messengerLink.querySelector('object[type="internal/link"]');
     var incomingLinkElement = objectElement ? objectElement.querySelector('a') : null;
     var bElement = incomingLinkElement ? incomingLinkElement.querySelector('b') : null;
+    messengerLink.textContent = "Мессенджер";
 
-    var newText = "Мессенджер";
-    messengerLink.textContent = newText;
     if (objectElement) {
-        messengerLink.appendChild(objectElement);
+        objectElement.innerHTML = objectElement.innerHTML.replace(/\(|\)/g, "");
     }
+
     if (bElement) {
         bElement.textContent = bElement.textContent.trim();
     }
     }
+    })();
 
+(function() {
+    'use strict';
     var groupsLink = document.querySelector('.navigation .link[href^="/groups"]');
     if (groupsLink && groupsLink.textContent.includes("Группы")) {
         groupsLink.textContent = "Сообщества";
