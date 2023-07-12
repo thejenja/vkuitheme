@@ -159,7 +159,7 @@ img[src="/assets/packages/static/openvk/img/oxygen-icons/16x16/mimetypes/applica
     width: auto !important;
 }
 
-.button {
+.button, .searchBtn {
     border-radius: 8px;
     border: 0;
     font-size: 13px!important;
@@ -170,7 +170,9 @@ img[src="/assets/packages/static/openvk/img/oxygen-icons/16x16/mimetypes/applica
     color: #fff;
     text-shadow: none;
     cursor: pointer;
-    text-decoration: none
+    text-decoration: none;
+    box-shadow: none;
+    height: auto;
 }
 .button[type="submit"]{
     background: #e1e3e6;
@@ -332,7 +334,7 @@ object {
     margin-right: 10px
 }
 
-object>a {
+object>a, object>* {
     padding: 5px 7px;
     background-color: #656565;
     font-size: 11px;
@@ -1354,7 +1356,17 @@ grid-row-gap: 0px;
 .navigation-lang .link_new center, .navigation-lang .link_new br{
     display: none;
 }
-
+.e, .v{
+    color: #000 !important;
+}
+#faqhead {
+    background: #514605;
+    border: 1px solid #534d22;
+}
+#faqcontent {
+    background: hsl(0 0% 8% / 1);
+    border: 1px solid #424242;
+}
 @media (prefers-color-scheme: light){
     body {
     color: #000;
