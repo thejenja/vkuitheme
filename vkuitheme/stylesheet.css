@@ -227,7 +227,7 @@ td[style="width: 100%"] {
 #profile_link,.profile_link {
     font-size: 13px;
     background-color: #424242;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 8px 0;
     border: 0;
     color: #fff;
@@ -305,8 +305,8 @@ td[style="width: 100%"] {
     width: 1000px;
     height: 100%;
     margin: auto;
-    background-color: #222;
-    box-shadow: -30px 0 20px 20px #222,-50px 0 20px 20px hsl(0deg 0% 13%/59%),-70px 0 20px 20px hsl(0deg 0% 13%/43%),-90px 0 20px 20px hsl(0deg 0% 13%/35%),-110px 0 20px 20px hsl(0deg 0% 13%/28%),-130px 0 20px 20px hsl(0deg 0% 13%/16%),30px 0 20px 20px #222,50px 0 20px 20px hsl(0deg 0% 13%/59%),70px 0 20px 20px hsl(0deg 0% 13%/43%),90px 0 20px 20px hsl(0deg 0% 13%/35%),110px 0 20px 20px hsl(0deg 0% 13%/28%),130px 0 20px 20px hsl(0deg 0% 13%/16%)
+    background-color: #141414;
+    box-shadow: -30px 0 20px 20px #141414,-50px 0 20px 20px hsl(0deg 0% 7%/59%),-70px 0 20px 20px hsl(0deg 0% 7%/43%),-90px 0 20px 20px hsl(0deg 0% 7%/35%),-110px 0 20px 20px hsl(0deg 0% 7%/28%),-130px 0 20px 20px hsl(0deg 0% 7%/16%),30px 0 20px 20px #141414,50px 0 20px 20px hsl(0deg 0% 7%/59%),70px 0 20px 20px hsl(0deg 0% 7%/43%),90px 0 20px 20px hsl(0deg 0% 7%/35%),110px 0 20px 20px hsl(0deg 0% 7%/28%),130px 0 20px 20px hsl(0deg 0% 7%/16%)
 }
 
 #wrapH,#wrapHI,.page-wrap,.page_wrap,.wrap1,.wrap2,hr {
@@ -414,7 +414,7 @@ h4 {
 input[type~=search] {
     color: #e1e3e6;
     border: 1px solid #3e3e3e;
-    background: #424242 url("data:image/svg+xml,%3Csvg fill='none' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.50006 1c3.03759 0 5.50004 2.46256 5.50004 5.50029 0 1.24839-.4159 2.39964-1.1166 3.32275l3.8956 3.90026c.2927.2931.2924.768-.0006 1.0607-.2931.2927-.768.2924-1.0607-.0006l-3.89514-3.8995c-.92307.7008-2.07427 1.1167-3.3226 1.1167-3.0376 0-5.50006-2.46258-5.50006-5.50031s2.46246-5.50029 5.50006-5.50029zm0 1.5c-2.20916 0-4.00006 1.79098-4.00006 4.00029 0 2.20932 1.7909 4.00031 4.00006 4.00031 2.20915 0 4.00004-1.79099 4.00004-4.00031 0-2.20931-1.79089-4.00029-4.00004-4.00029z' fill='%23757575'/%3E%3C/svg%3E")no-repeat 8px 7px!important;
+    background: #424242 url("data:image/svg+xml,%3Csvg fill='none' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.50006 1c3.03759 0 5.50004 2.46256 5.50004 5.50029 0 1.24839-.4159 2.39964-1.1166 3.32275l3.8956 3.90026c.2927.2931.2924.768-.0006 1.0607-.2931.2927-.768.2924-1.0607-.0006l-3.89514-3.8995c-.92307.7008-2.07427 1.1167-3.3226 1.1167-3.0376 0-5.50006-2.46258-5.50006-5.50031s2.46246-5.50029 5.50006-5.50029zm0 1.5c-2.20916 0-4.00006 1.79098-4.00006 4.00029 0 2.20932 1.7909 4.00031 4.00006 4.00031 2.20915 0 4.00004-1.79099 4.00004-4.00031 0-2.20931-1.79089-4.00029-4.00004-4.00029z' fill='%23b2b2b2'/%3E%3C/svg%3E")no-repeat 8px 7px!important;
     background-color: #424242!important;
     padding-left: 32px!important;
     border-radius: 8px;
@@ -425,7 +425,17 @@ input[type~=search] {
     height: 32px!important;
     font-size: 13px
 }
-
+input[type~=search]::placeholder{
+    color: #b2b2b2;
+}
+.whatFind {
+    margin-top: -4px;
+    background-color: #222
+}
+form[style="margin-top: -1px;position:relative;"] > #searchInput{
+    margin-left: -812px;
+    margin-top: -2px;
+}
 .accountInfo {
     padding: 0;
     margin: 0 0 0 8px;
@@ -458,8 +468,11 @@ input[type~=search] {
     border: 0 !important
 }
 
-.post-divider {
+.post-divider, .searchOptionName {
     border-bottom: 1px #424242 solid !important
+}
+.searchBtn{
+    height: 27px !important;
 }
 
 .heart,.repost-icon {
@@ -476,7 +489,8 @@ input[type~=search] {
 
 .repost-icon {
     background: url("data:image/svg+xml,%3Csvg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'%3E%3C/path%3E%3Cpath d='M12 3.73c-1.12.07-2 1-2 2.14v2.12h-.02a9.9 9.9 0 0 0-7.83 10.72.9.9 0 0 0 1.61.46l.19-.24a9.08 9.08 0 0 1 5.84-3.26l.2-.03.01 2.5a2.15 2.15 0 0 0 3.48 1.69l7.82-6.14a2.15 2.15 0 0 0 0-3.38l-7.82-6.13c-.38-.3-.85-.46-1.33-.46zm.15 1.79c.08 0 .15.03.22.07l7.82 6.14a.35.35 0 0 1 0 .55l-7.82 6.13a.35.35 0 0 1-.57-.28V14.7a.9.9 0 0 0-.92-.9h-.23l-.34.02c-2.28.14-4.4.98-6.12 2.36l-.17.15.02-.14a8.1 8.1 0 0 1 6.97-6.53.9.9 0 0 0 .79-.9V5.87c0-.2.16-.35.35-.35z' fill='%23b2b2b2' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")no-repeat 14px -1px !important;
-    width: 36px !important
+    width: 26px !important;
+    padding-right: 10px;
 }
 
 .heart:hover,.repost-icon {
@@ -506,8 +520,8 @@ input[type~=search] {
     float: left
 }
 
-.post-like-button:has(#liked) {
-    background-color: #3e2526
+.post-like-button:has(#liked), .post-like-button:hover:has(#liked) {
+    background-color: #3e2526 !important
 }
 
 #liked~.likeCnt {
@@ -1367,6 +1381,16 @@ grid-row-gap: 0px;
     background: hsl(0 0% 8% / 1);
     border: 1px solid #424242;
 }
+.ugc-table tr>td:nth-of-type(1) {
+    width: 140px !important;
+}
+#basicInfo {
+    padding: 5px 0 5px 8px;
+}
+div[style="padding: 10px 8px 15px 8px;"]{
+    padding: 5px 8px 5px 8px !important;
+}
+
 @media (prefers-color-scheme: light){
     body {
     color: #000;
