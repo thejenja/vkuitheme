@@ -1,10 +1,12 @@
 @import url(https://rsms.me/inter/inter.css);
 
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
+
 html {
     color-scheme: dark !important;
 }
 * {
-    font-family: "Inter"!important
+    font-family: "Roboto", "Inter" !important
 }
 
 body {
@@ -185,9 +187,11 @@ img[src="/assets/packages/static/openvk/img/oxygen-icons/16x16/mimetypes/applica
 
 .tab {
     display: inline-block;
-    padding: 16px;
+    padding: 12px 16px 11px 16px;
+    margin: 8px;
     margin-right: 3px;
-    border-radius: 3px 3px 0 0
+    border-radius: 8px;
+    line-height: 12px;
 }
 
 .tab:hover {
@@ -196,7 +200,17 @@ img[src="/assets/packages/static/openvk/img/oxygen-icons/16x16/mimetypes/applica
 
 #activetabs {
     background: 0 0;
-    border-bottom: 2px solid #5181b8
+    background-color: rgba(255, 255, 255, 0.08);
+}
+#ki{
+    color: #e1e3e6
+}
+.links-container{
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    top: 194px;
+    left: 1050px;
 }
 
 .content>table td[width="120"]~td {
@@ -302,7 +316,7 @@ td[style="width: 100%"] {
 }
 
 #backdropDripper {
-    width: 1000px;
+    width: 950px;
     height: 100%;
     margin: auto;
     background-color: #141414;
@@ -1041,11 +1055,16 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
     color: #eaeaea;
 }
 .avatarDelete {
-    right: 10px;
+    border-radius: 0 12px 0 0;
+    right: 0px;
 }
 .avatar_variants {
-    width: 223px;
-    margin-bottom: 13px !important;
+    width: 245px;
+    margin-bottom: 4px !important;
+    border-radius: 0 0 12px 12px;
+}
+.variant {
+    justify-content: center;
 }
 .groups_options {
     border-top: #424242 solid 1px;
@@ -1390,6 +1409,13 @@ grid-row-gap: 0px;
 div[style="padding: 10px 8px 15px 8px;"]{
     padding: 5px 8px 5px 8px !important;
 }
+.avatar_block{
+    padding: 0px !important;
+    border: 0 !important;
+}
+#thisUserAvatar{
+    border-radius: 12px;
+}
 
 @media (prefers-color-scheme: light){
     body {
@@ -1420,12 +1446,12 @@ div[style="padding: 10px 8px 15px 8px;"]{
     color: #222;
 }
 .left_small_block>div,.right_big_block>div {
-    background-color: #222;
+    background-color: #fff;
     border: 1px solid #dce1e6
 }
 #backdropDripper {
     background-color: #edeef0;
-    box-shadow: -30px 0 20px 20px #edeef0,-50px 0 20px 20px hsl(0deg 0% 13%/59%),-70px 0 20px 20px hsl(0deg 0% 13%/43%),-90px 0 20px 20px hsl(0deg 0% 13%/35%),-110px 0 20px 20px hsl(0deg 0% 13%/28%),-130px 0 20px 20px hsl(0deg 0% 13%/16%),30px 0 20px 20px #edeef0,50px 0 20px 20px hsl(0deg 0% 13%/59%),70px 0 20px 20px hsl(0deg 0% 13%/43%),90px 0 20px 20px hsl(0deg 0% 13%/35%),110px 0 20px 20px hsl(0deg 0% 13%/28%),130px 0 20px 20px hsl(0deg 0% 13%/16%)
+    box-shadow: -30px 0 20px 20px #edeef0,-50px 0 20px 20px hsl(0deg 0% 83%/59%),-70px 0 20px 20px hsl(0deg 0% 83%/43%),-90px 0 20px 20px hsl(0deg 0% 83%/35%),-110px 0 20px 20px hsl(0deg 0% 83%/28%),-130px 0 20px 20px hsl(0deg 0% 83%/16%),30px 0 20px 20px #edeef0,50px 0 20px 20px hsl(0deg 0% 83%/59%),70px 0 20px 20px hsl(0deg 0% 83%/43%),90px 0 20px 20px hsl(0deg 0% 83%/35%),110px 0 20px 20px hsl(0deg 0% 83%/28%),130px 0 20px 20px hsl(0deg 0% 83%/16%)
 }
 .container_gray {
     background: #fff;
@@ -1487,4 +1513,17 @@ input[type~=date],select,textarea {
 .post-like-button:hover,.post-share-button:hover {
     background-color: #ebedf0 !important
 }
+    #profile_link, .profile_link{
+        background-color: #e5ebf1;
+    color: #346297;
+    }
+    #profile_link:hover, .profile_link:hover {
+    background-color: #E5EBF1E3;
+}
+    #profile_link>a{
+         color: #346297;
+    }
+    object>a, object>*{
+        background-color: #99a2ad;
+    }
 }
