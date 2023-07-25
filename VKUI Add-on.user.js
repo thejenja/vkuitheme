@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VKUI Add-on
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  VKUI Add-on for OpenVK
 // @author       thejenja_
 // @match        https://openvk.su/*
@@ -119,26 +119,19 @@
 (function() {
     'use strict';
 
-    // Находим элементы, которые нужно переместить и элемент, над которым нужно их переместить
     var containerToMove = document.querySelector('#auth > div > div.right_big_block > div:nth-child(3):has(.cl_element[style="width: 25%;"])');
     var targetElement = document.querySelector('#auth > div > div.left_small_block > div:nth-child(4):has(.content_list)');
 
-    // Проверяем, что оба элемента найдены
     if (containerToMove && targetElement) {
-        // Вставляем контейнер перед целевым элементом
         targetElement.parentNode.insertBefore(containerToMove, targetElement);
     }
 })();
 (function() {
     'use strict';
-
-    // Находим контейнер и элементы, которые нужно подсчитать
     var container = document.querySelector('.content_list.long');
     var elements = container.querySelectorAll('.cl_element');
 
-    // Проверяем, что контейнер и элементы найдены
     if (container && elements.length > 2) {
-        // Удаляем лишние элементы, начиная с третьего
         for (var i = 2; i < elements.length; i++) {
             container.removeChild(elements[i]);
         }
@@ -146,14 +139,32 @@
 })();
 (function() {
     'use strict';
-
-    // Находим элементы, которые нужно переместить и элемент, над которым нужно их переместить
     var containerToMove = document.querySelector('#auth > div > div.left_big_block > div:nth-child(3):has(.content_list.long)');
     var targetElement = document.querySelector('#auth > div > div.right_small_block > div:nth-child(3):has(div[style="padding:4px"])');
 
-    // Проверяем, что оба элемента найдены
     if (containerToMove && targetElement) {
-        // Вставляем контейнер перед целевым элементом
         targetElement.parentNode.insertBefore(containerToMove, targetElement);
+    }
+})();
+(function() {
+    'use strict';
+    var linkElement = document.querySelector('.navigation .link[href="/notifications"]');
+    if (linkElement) {
+        var content = linkElement.textContent.trim();
+        var regex = /\((\d+)\)/;
+        var match = content.match(regex);
+        if (match) {
+            var number = match[1];
+            var objectElement = document.createElement('object');
+            var aElement = document.createElement('a');
+            aElement.href = '/notifications?act=new';
+            aElement.textContent = number;
+            objectElement.appendChild(aElement);
+            var spanElement = document.createElement('span');
+            spanElement.textContent = content.replace(regex, '').trim();
+            linkElement.innerHTML = '';
+            linkElement.appendChild(spanElement);
+            linkElement.appendChild(objectElement);
+        }
     }
 })();
