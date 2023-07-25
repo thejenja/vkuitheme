@@ -1392,7 +1392,7 @@ grid-row-gap: 0px;
 .e, .v{
     color: #000 !important;
 }
-#faqhead {
+#faqhead, .tour {
     background: #514605;
     border: 1px solid #534d22;
 }
@@ -1415,6 +1415,10 @@ div[style="padding: 10px 8px 15px 8px;"]{
 }
 #thisUserAvatar{
     border-radius: 12px;
+}
+.navigation .link[href='/notifications'] span{
+    font-size: 13px;
+    padding: 0;
 }
 
 @media (prefers-color-scheme: light){
