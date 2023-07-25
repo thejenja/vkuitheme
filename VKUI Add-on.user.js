@@ -35,6 +35,31 @@
   });
 })();
 (function() {
+    'use strict';
+    var linkElement = document.querySelector('.navigation .link[href="/notifications"]');
+    if (linkElement) {
+
+        var content = linkElement.textContent.trim();
+        var regex = /\((\d+)\)/;
+        var match = content.match(regex);
+        if (match) {
+            var number = match[1];
+            var objectElement = document.createElement('object');
+            var aElement = document.createElement('a');
+
+            aElement.href = '/notifications?act=new';
+            aElement.textContent = number;
+            objectElement.appendChild(aElement);
+            var spanElement = document.createElement('span');
+
+            spanElement.textContent = content.replace(regex, '').trim();
+            linkElement.innerHTML = '';
+            linkElement.appendChild(spanElement);
+            linkElement.appendChild(objectElement);
+        }
+    }
+})();
+(function() {
     let link = document.createElement('a');
     link.setAttribute('href', '/notifications');
     link.setAttribute('class', 'notifyLink');
@@ -144,27 +169,5 @@
 
     if (containerToMove && targetElement) {
         targetElement.parentNode.insertBefore(containerToMove, targetElement);
-    }
-})();
-(function() {
-    'use strict';
-    var linkElement = document.querySelector('.navigation .link[href="/notifications"]');
-    if (linkElement) {
-        var content = linkElement.textContent.trim();
-        var regex = /\((\d+)\)/;
-        var match = content.match(regex);
-        if (match) {
-            var number = match[1];
-            var objectElement = document.createElement('object');
-            var aElement = document.createElement('a');
-            aElement.href = '/notifications?act=new';
-            aElement.textContent = number;
-            objectElement.appendChild(aElement);
-            var spanElement = document.createElement('span');
-            spanElement.textContent = content.replace(regex, '').trim();
-            linkElement.innerHTML = '';
-            linkElement.appendChild(spanElement);
-            linkElement.appendChild(objectElement);
-        }
     }
 })();
