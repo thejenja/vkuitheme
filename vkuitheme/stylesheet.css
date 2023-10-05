@@ -477,7 +477,7 @@ form[style="margin-top: -1px;position:relative;"] > #searchInput{
     background-color: #222;
     color: #b2b2b2
 }
-#standaloneCommentBox, .commentsTextFieldWrap {
+#standaloneCommentBox, .commentsTextFieldWrap, #showMorePhotos {
     background-color: transparent !important;
     border: 0 !important
 }
@@ -1572,4 +1572,17 @@ img[src$="/assets/packages/static/openvk/img/camera_200.png"]{
 }
 .blueList li {
     color: #fff;
+}
+.topGrayBlock {
+    background: #222;
+    border-bottom: 1px solid #424242;
+}
+.videosInsert{
+    width: 550px !important
+}
+div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top: -5px;padding-top: 6px;"]{
+    background: transparent !important;
+}
+.photosInsert{
+    width: 600px !important;
 }
