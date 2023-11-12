@@ -122,7 +122,7 @@ input[type~=date],select,textarea {
     width: 110px
 }
 
-#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover {
+#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover, .audioEntry:hover {
     background-color: rgba(255,255,255,.08)
 }
 
@@ -298,7 +298,7 @@ td[style="width: 100%"] {
     border: 0
 }
 
-#profile_links,div[style="margin-left: auto;margin-right: auto;display: table;"] {
+#profile_links,div[style="margin-left: auto;margin-right: auto;display: table;"], #upload_container, #audio_upload {
     background-color: transparent;
     border-radius: 0;
     margin-bottom: 0;
@@ -323,7 +323,7 @@ td[style="width: 100%"] {
     box-shadow: -30px 0 20px 20px #141414,-50px 0 20px 20px hsl(0deg 0% 7%/59%),-70px 0 20px 20px hsl(0deg 0% 7%/43%),-90px 0 20px 20px hsl(0deg 0% 7%/35%),-110px 0 20px 20px hsl(0deg 0% 7%/28%),-130px 0 20px 20px hsl(0deg 0% 7%/16%),30px 0 20px 20px #141414,50px 0 20px 20px hsl(0deg 0% 7%/59%),70px 0 20px 20px hsl(0deg 0% 7%/43%),90px 0 20px 20px hsl(0deg 0% 7%/35%),110px 0 20px 20px hsl(0deg 0% 7%/28%),130px 0 20px 20px hsl(0deg 0% 7%/16%)
 }
 
-#wrapH,#wrapHI,.page-wrap,.page_wrap,.wrap1,.wrap2,hr {
+#wrapH,#wrapHI,.page-wrap,.page_wrap,.wrap1,.wrap2,hr, .searchOptions.newer {
     border: 0
 }
 
@@ -392,7 +392,7 @@ object>a, object>* {
     width: auto
 }
 
-h4 {
+h4, #upload_container h4 {
     border-bottom: 0;
     color: #939393;
     font-size: 14px;
@@ -667,7 +667,7 @@ body.scrolled .toTop:hover {
     padding-top: 0
 }
 
-h1,h2,p,small,span, label, div {
+h1,h2,p,small,span, label, div, li {
     color: #e1e3e6!important
 }
 p, span, label, td{
@@ -678,6 +678,9 @@ p, span, label, td{
     height: auto;
     box-shadow: none;
     background-color: transparent
+}
+.bigPlayer .paddingLayer .trackPanel {
+    width: 72%;
 }
 
 .postFeedWrapper {
@@ -936,6 +939,7 @@ center[style="background: white;border: #DEDEDE solid 1px;"]{
     border-color: #424242 !important;
     box-shadow: none !important;
 }
+
 .poll-result-bar {
     border-radius: 4px;
     padding: 5px 0;
@@ -1108,6 +1112,7 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
 .borderup {
     border: 0;
 }
+
 .searchList #used {
     margin-left: 0px;
     color: white;
@@ -1120,7 +1125,8 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
     margin-bottom: 5px;
     width: 90%;
 }
-.searchList li:hover {
+.searchList a:hover {
+    color: #828282 !important;
     padding: 0px;
     background: rgba(255,255,255,.08);
     padding-top: 10px;
@@ -1129,7 +1135,8 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
     margin-bottom: 5px;
     width: 90%;
 }
-.searchList li {
+.searchList a {
+    color: #828282 !important;
     border-radius: 8px;
     padding-left: 10px;
     padding-top: 10px;
@@ -1562,11 +1569,11 @@ img[src$="/assets/packages/static/openvk/img/camera_200.png"]{
 .content_list.long .cl_element {
     width: 90px !important;
 }
-.content_list.long .cl_element .cl_avatar{
+/*.content_list.long .cl_element .cl_avatar{
     background-color: #fff;
     border-radius: 16px;
     margin-right: 10px
-}
+}*/
 .left_small_block>div{
     overflow: hidden;
 }
@@ -1615,4 +1622,20 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
 }
 #profile_links {
     margin: 0;
+}
+.bigPlayer {
+    background-color: transparent;
+    border-bottom: 0;
+    box-shadow: none;
+}
+.bigPlayer .paddingLayer .playButtons .playButton {
+    background-image: none;
+    content: url("data:image/svg+xml,%3Csvg fill='none' height='28' viewBox='0 0 28 28' width='28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M28 14a14 14 0 1 1-28 0 14 14 0 0 1 28 0zm-8.98.87c.64-.39.64-1.36 0-1.74l-6.6-4c-.64-.38-1.42.1-1.42.87v8c0 .76.78 1.25 1.41.87z' fill='%23e1e3e6' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+}
+.searchList hr{
+    background-color: #424242;
+    width: inherit;
+}
+.friendsAudiosList .elem:hover {
+    background: transparent;
 }
