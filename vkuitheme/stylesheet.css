@@ -680,8 +680,26 @@ p, span, label, td{
     background-color: transparent
 }
 .bigPlayer .paddingLayer .trackPanel {
-    width: 72%;
+    width: 70%;
 }
+.audioEmbed .track > .selectableTrack, .bigPlayer .selectableTrack{
+    overflow: hidden
+}
+.slider {
+  position: relative;
+  overflow: visible;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -620px;
+  width: 620px;
+  height: 100%;
+  background-color: white; /* Цвет левой полосы */
+}
+
 
 .postFeedWrapper {
     background-color: #222;
@@ -1623,19 +1641,94 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
 #profile_links {
     margin: 0;
 }
+.bigPlayer.floating {
+    position: fixed;
+    z-index: 199;
+    width: 910px;
+    margin-top: -126px;
+}
 .bigPlayer {
-    background-color: transparent;
+    width: 910px;
+    background-color: #222222;
     border-bottom: 0;
     box-shadow: none;
+}
+.bigPlayer .paddingLayer .playButtons .playButton {
+    width: 28px;
+    height: 28px;
 }
 .bigPlayer .paddingLayer .playButtons .playButton {
     background-image: none;
     content: url("data:image/svg+xml,%3Csvg fill='none' height='28' viewBox='0 0 28 28' width='28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M28 14a14 14 0 1 1-28 0 14 14 0 0 1 28 0zm-8.98.87c.64-.39.64-1.36 0-1.74l-6.6-4c-.64-.38-1.42.1-1.42.87v8c0 .76.78 1.25 1.41.87z' fill='%23e1e3e6' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
 }
+.bigPlayer .paddingLayer .playButtons .playButton.pause {
+    content: url("data:image/svg+xml,%3Csvg fill='none' height='28' viewBox='0 0 28 28' width='28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M28 14a14 14 0 1 1-28 0 14 14 0 0 1 28 0zM10 9.6c0-.33.27-.6.6-.6h1.8c.33 0 .6.27.6.6v8.8a.6.6 0 0 1-.6.6h-1.8a.6.6 0 0 1-.6-.6zm5 0c0-.33.27-.6.6-.6h1.8c.33 0 .6.27.6.6v8.8a.6.6 0 0 1-.6.6h-1.8a.6.6 0 0 1-.6-.6z' fill='%23e1e3e6' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E")
+}
+.bigPlayer .paddingLayer .playButtons .nextButton {
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    background-image: none;
+    content: url("data:image/svg+xml,%3Csvg fill='none' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75 15c.41 0 .75-.34.75-.75v-3.18l7.12 3.82a.94.94 0 0 0 1.38-.83V5.94a.94.94 0 0 0-1.38-.83L6.5 8.93V5.75a.75.75 0 0 0-1.5 0v8.5c0 .41.34.75.75.75z' fill='%23a8a9ac'%3E%3C/path%3E%3C/svg%3E")
+}
+.bigPlayer .paddingLayer .playButtons .backButton {
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    background-image: none;
+    content: url("data:image/svg+xml,%3Csvg fill='none' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.25 5a.75.75 0 0 0-.75.75v3.18L6.38 5.1A.94.94 0 0 0 5 5.94v8.12a.94.94 0 0 0 1.38.83l7.12-3.82v3.18a.75.75 0 0 0 1.5 0v-8.5a.75.75 0 0 0-.75-.75z' fill='%23a8a9ac'%3E%3C/path%3E%3C/svg%3E")
+}
+.bigPlayer .paddingLayer .bigPlayerTip {
+    display: none;
+    z-index: 999;
+    background: #363738;
+    border-radius: 4px;
+    padding: 3px 4px;
+    top: -3px;
+    position: absolute;
+    transition: all .1s ease-out;
+    user-select: none;
+}
 .searchList hr{
     background-color: #424242;
     width: inherit;
 }
+.searchList.floating {
+    position: fixed;
+    z-index: 199;
+    width: 231px;
+    margin-top: -125px !important;
+}
 .friendsAudiosList .elem:hover {
     background: transparent;
+}
+.audioEmbed .track > .selectableTrack, .bigPlayer .selectableTrack {
+    position: relative;
+    height: 2px;
+    border-top: 0;
+    background-color: rgba(255, 255, 255, 0.24);
+    border-radius: 2.5px;
+}
+.bigPlayer .paddingLayer .slider, .audioEmbed .track .slider {
+    width: 3px;
+    height: 2px;
+    background: #fff;
+}
+.lagged {
+    filter: none;
+}
+.audioEmbed .track > .selectableTrack, .bigPlayer .selectableTrack:hover .slider::after{
+    opacity: 1;
+} 
+.slider::after {
+    content: "";
+    position: fixed;
+    overflow: visible;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    margin-top: -2px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: .5s;
 }
