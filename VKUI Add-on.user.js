@@ -1,20 +1,23 @@
 // ==UserScript==
 // @name         VKUI Add-on
 // @namespace    http://tampermonkey.net/
-// @version      0.7
+// @version      0.8
 // @description  VKUI Add-on for OpenVK
-// @author       thejenja_
-// @match        https://openvk.su/*
+// @author       thejenja
 // @match        https://vepurovk.xyz/*
+// @match        https://openvk.su/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openvk.su
 // @grant        none
 // ==/UserScript==
+
+// эта ржака убирает скобки в счётчиках
 (function() {
     'use strict';
 
     let object = document.querySelector("body > div.layout > div.sidebar div a > object");
     object.innerHTML = object.innerHTML.replace(/\(|\)/g, "");
 })();
+// эта ржака делает вкшную иконку на вкладке, желательно бы её заменить ну да ладно
 (function() {
     'use strict';
     window.addEventListener('load', function() {
@@ -25,6 +28,7 @@
     document.head.appendChild(clone);
     }, false);
 })();
+// эта ржака убирает местоимения в начале разделов
 (function() {
   const navigationLinks = document.querySelectorAll('.navigation a');
   navigationLinks.forEach(link => {
@@ -34,6 +38,7 @@
     }
   });
 })();
+// жирнейший фикс для счётчика ответов, потому что изначально овк не суёт (любая цифра) в object
 (function() {
     'use strict';
     var linkElement = document.querySelector('.navigation .link[href="/notifications"]');
@@ -59,6 +64,10 @@
         }
     }
 })();
+// ну тут вообще сказка, добавляет иконку уведомлений в навигации
+// ещё тут была иконка музыки, но благополучна убрана.
+// 1. у меня ломалась svg и правый кругляш красился в серый
+// 2. во время написания скрипта не было музыки
 (function() {
     let link = document.createElement('a');
     link.setAttribute('href', '/notifications');
@@ -75,6 +84,7 @@
     let headerDiv = document.querySelector('.page_header');
     headerDiv.insertBefore(link, headerDiv.firstChild);
 })();
+// делает вкшный порядок разделов, вообще нейросеть делала плотную ржаку с проверкой КАЖДОГО РАЗДЕЛА на проверку его порядка, то есть циклов больше, чем внешний долг овк
 (function() {
     'use strict';
 
@@ -100,6 +110,7 @@
         }
     });
 })();
+// изначально при замене название тупо пропадал счётчик сообщений, вот тебе и анекдот...
 (function() {
       'use strict';
   var messengerLink = document.querySelector('.navigation .link[href^="/im"]');
@@ -107,6 +118,7 @@
     var objectElement = messengerLink.querySelector('object[type="internal/link"]');
     var incomingLinkElement = objectElement ? objectElement.querySelector('a') : null;
     var bElement = incomingLinkElement ? incomingLinkElement.querySelector('b') : null;
+    // братан, тебе действительно нравится это название?
     messengerLink.innerText = "Мессенджер";
     if (objectElement) {
       objectElement.innerHTML = objectElement.innerHTML.replace(/\(|\)/g, "");
@@ -118,6 +130,7 @@
     }
   }
 })();
+// заменяем название разделов
 (function() {
     'use strict';
     var groupsLink = document.querySelector('.navigation .link[href^="/groups"]');
@@ -128,11 +141,16 @@
     if (videosLink && videosLink.textContent.includes("Видеозаписи")) {
         videosLink.textContent = "Видео";
     }
+    var musicLink = document.querySelector('.navigation .link[href^="/audios"]');
+    if (musicLink && musicLink.textContent.includes("Аудиозаписи")) {
+        musicLink.textContent = "Музыка";
+    }
     var servicesLink = document.querySelector('.navigation .link[href="/apps?act=installed"]');
     if (servicesLink && servicesLink.textContent.includes("Приложения")) {
         servicesLink.textContent = "Сервисы";
     }
 })();
+// братан, я знаю на каком сайте сижу, можешь не напоминать
 (function() {
     'use strict';
     var title = document.title;
@@ -141,27 +159,30 @@
         document.title = newTitle;
     }
 })();
+// меняем положение разделов
 (function() {
     'use strict';
 
-    var containerToMove = document.querySelector('#auth > div > div.right_big_block > div:nth-child(3):has(.cl_element[style="width: 25%;"])');
+    var containerToMove = document.querySelector('#auth > div > div.right_big_block > div:has(.cl_element[style="width: 25%;"])');
     var targetElement = document.querySelector('#auth > div > div.left_small_block > div:nth-child(4):has(.content_list)');
 
     if (containerToMove && targetElement) {
         targetElement.parentNode.insertBefore(containerToMove, targetElement);
     }
 })();
+// так как переместили подарки влево, уменьшим кол-во подарков до трёх
 (function() {
     'use strict';
     var container = document.querySelector('.content_list.long');
     var elements = container.querySelectorAll('.cl_element');
 
-    if (container && elements.length > 2) {
-        for (var i = 2; i < elements.length; i++) {
+    if (container && elements.length > 3) {
+        for (var i = 3; i < elements.length; i++) {
             container.removeChild(elements[i]);
         }
     }
 })();
+// опять переносим раздел
 (function() {
     'use strict';
     var containerToMove = document.querySelector('#auth > div > div.left_big_block > div:nth-child(3):has(.content_list.long)');
