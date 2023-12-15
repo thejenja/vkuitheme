@@ -122,7 +122,7 @@ input[type~=date],select,textarea {
     width: 110px
 }
 
-#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover, .audioEntry:hover {
+#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover, .audioEntry:hover, .attachAudio:hover {
     background-color: rgba(255,255,255,.08)
 }
 
@@ -1732,7 +1732,7 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
     opacity: 0;
     transition: .5s;
 }
-.selectableTrack > div[style="width: 95%;position: relative;"], div[style="position: relative;width: calc(100% - 18px);"]{
+.selectableTrack > div, div[style="position: relative;width: calc(100% - 18px);"]{
     width: 100% !important;
 }
 .audioEntry{
@@ -1808,4 +1808,52 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
 }
 .friendsAudiosList .elem{
     width: 100%
+}
+#upload_container.uploading {
+    background: transparent url(/assets/packages/static/openvk/img/progressbar.gif) !important;
+    background-position-x: 0% !important;
+    background-position-y: 0% !important;
+    background-repeat: repeat !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% !important;
+}
+a[href="/about:openvk"]:after{
+    content: " with VKUI theme"
+}
+.playlistContainer {
+    grid-template-columns: repeat(3, 200px);
+}
+.playlistContainer .playlistCover {
+    width: 200px;
+    height: 200px;
+    display: flex;
+}
+.playlistCover img {
+    max-width: 200px;
+    max-height: 200px;
+}
+.playlistContainer .playlistCover img {
+    max-width: 200px;
+    max-height: 200px;
+}
+.playlistInfo {
+    margin-top: 10px;
+}
+hr[style="color: #f7f7f7;"]{
+    display: none;
+}
+.profile_links[style="width: 139px;"]{
+    margin-top: 5px;
+    width: 200px !important;
+}
+.ovk-diag-body .searchBox {
+    background: #222;
+    padding-top: 10px;
+    height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+}
+.ovk-diag-body .searchBox input, .ovk-diag-body .searchBox select {
+    height: 34px;
 }
