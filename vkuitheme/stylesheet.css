@@ -349,7 +349,7 @@ object {
 }
 
 object>a, object>* {
-    padding: 5px 7px;
+    padding: 4px 7px;
     background-color: #656565;
     font-size: 11px;
     font-weight: 700;
@@ -428,7 +428,7 @@ h4, #upload_container h4 {
 input[type~=search] {
     color: #e1e3e6;
     border: 1px solid #3e3e3e;
-    background: #424242 url("data:image/svg+xml,%3Csvg fill='none' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.50006 1c3.03759 0 5.50004 2.46256 5.50004 5.50029 0 1.24839-.4159 2.39964-1.1166 3.32275l3.8956 3.90026c.2927.2931.2924.768-.0006 1.0607-.2931.2927-.768.2924-1.0607-.0006l-3.89514-3.8995c-.92307.7008-2.07427 1.1167-3.3226 1.1167-3.0376 0-5.50006-2.46258-5.50006-5.50031s2.46246-5.50029 5.50006-5.50029zm0 1.5c-2.20916 0-4.00006 1.79098-4.00006 4.00029 0 2.20932 1.7909 4.00031 4.00006 4.00031 2.20915 0 4.00004-1.79099 4.00004-4.00031 0-2.20931-1.79089-4.00029-4.00004-4.00029z' fill='%23b2b2b2'/%3E%3C/svg%3E")no-repeat 8px 7px!important;
+    background: #424242 url("data:image/svg+xml,%3Csvg fill='none' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.50006 1c3.03759 0 5.50004 2.46256 5.50004 5.50029 0 1.24839-.4159 2.39964-1.1166 3.32275l3.8956 3.90026c.2927.2931.2924.768-.0006 1.0607-.2931.2927-.768.2924-1.0607-.0006l-3.89514-3.8995c-.92307.7008-2.07427 1.1167-3.3226 1.1167-3.0376 0-5.50006-2.46258-5.50006-5.50031s2.46246-5.50029 5.50006-5.50029zm0 1.5c-2.20916 0-4.00006 1.79098-4.00006 4.00029 0 2.20932 1.7909 4.00031 4.00006 4.00031 2.20915 0 4.00004-1.79099 4.00004-4.00031 0-2.20931-1.79089-4.00029-4.00004-4.00029z' fill='%23939393'/%3E%3C/svg%3E")no-repeat 9px 7px!important;
     background-color: #424242!important;
     padding-left: 32px!important;
     border-radius: 8px;
@@ -440,7 +440,7 @@ input[type~=search] {
     font-size: 13px
 }
 input[type~=search]::placeholder{
-    color: #b2b2b2;
+    color: #828282;
 }
 .whatFind {
     margin-top: -4px;
@@ -651,7 +651,7 @@ select[style="width: 164px;"] {
     width: 114px;
     background-color: rgba(255,255,255,.08);
     font-weight: 600;
-    color: #45688e;
+    color: #45688e !important;
     box-sizing: border-box;
     opacity: 0;
     -webkit-transition: background-color 200ms linear,opacity 200ms linear;
@@ -1139,7 +1139,7 @@ img[src="/assets/packages/static/openvk/img/icon2.gif"]{
     padding-top: 10px;
     padding-bottom: 10px;
     border: 0;
-    background: rgba(255,255,255,.16);
+    background: #333;
     padding-left: 10px;
     margin-bottom: 5px;
     width: 90%;
@@ -1575,7 +1575,7 @@ input[type~=date],select,textarea {
          color: #346297;
     }
     object>a, object>*{
-        background-color: #99a2ad;
+        background-color: #828282;
     }
     .home_button {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI3NiA0OCIgd2lkdGg9IjI3NiIgaGVpZ2h0PSI0OCI+PHN0eWxlPi5he2ZpbGw6IzA3Zn0uYntmaWxsOiNmZmZ9PC9zdHlsZT48cGF0aCBjbGFzcz0iYSIgZD0ibTAgMjNjMC0xMC44IDAtMTYuMyAzLjQtMTkuNiAzLjMtMy40IDguOC0zLjQgMTkuNi0zLjRoMmMxMC44IDAgMTYuMyAwIDE5LjYgMy40IDMuNCAzLjMgMy40IDguOCAzLjQgMTkuNnYyYzAgMTAuOCAwIDE2LjMtMy40IDE5LjYtMy4zIDMuNC04LjggMy40LTE5LjYgMy40aC0yYy0xMC44IDAtMTYuMyAwLTE5LjYtMy40LTMuNC0zLjMtMy40LTguOC0zLjQtMTkuNnoiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsYXNzPSJiIiBkPSJtMzguNCAyNS4yYy0wLjIgMy41LTEuMSA2LjItMi44IDguNi0yLjEgMi44LTUuMyA0LjQtOS4zIDQuOS0zLjUgMC4zLTYuOC0wLjItOS40LTEuNC0zLjUtMS43LTUuOS01LTYuOC05LjItMC4zLTEuNS0wLjMtMi4yLTAuMy00LjEgMC0xLjkgMC0yLjYgMC4zLTQgMS4xLTYgNS4yLTkuOCAxMS4zLTEwLjYgMi4yLTAuMyA1LjItMC4yIDcuMiAwLjQgMy44IDAuOSA2LjYgMy4xIDguMiA2LjUgMS4yIDIuNCAxLjggNS41IDEuNiA4Ljl6bS0xMC45IDYuMWMwLjktMC45IDEuNi0yLjQgMS45LTQuNCAwLjItMS4xIDAuMi00LjQgMC01LjYtMC40LTIuOC0xLjUtNC42LTMtNS40LTAuNy0wLjMtMS4zLTAuNC0yLjMtMC40LTEuNSAwLTIuNSAwLjMtMy4zIDEuMS0xIDEtMS43IDIuNC0yIDQuNC0wLjIgMS41LTAuMiA0LjQgMCA1LjlxMCAwLjMgMC4xIDAuNiAwLjEgMC4zIDAuMSAwLjYgMC4xIDAuMyAwLjIgMC42IDAuMSAwLjMgMC4yIDAuNmMwLjggMS45IDEuOSAyLjggMy44IDMuMSAxLjUgMC4zIDMuMy0wLjIgNC4zLTEuMXoiLz48cGF0aCAgZD0ibTc1LjMgMzUuNHEtMy4zIDAtNS45LTEuNC0yLjYtMS40LTQtMy44LTEuNS0yLjUtMS41LTUuNyAwLTMuMSAxLjUtNS42IDEuNC0yLjUgNC0zLjkgMi42LTEuNCA1LjktMS40IDMuMyAwIDUuOSAxLjQgMi42IDEuNCA0IDMuOSAxLjQgMi41IDEuNCA1LjYgMCAzLjItMS40IDUuNy0xLjQgMi40LTQgMy44LTIuNiAxLjQtNS45IDEuNHptMC00LjlxMi41IDAgNC4xLTEuNyAxLjYtMS42IDEuNi00LjMgMC0yLjYtMS42LTQuMy0xLjYtMS42LTQuMS0xLjYtMi42IDAtNC4yIDEuNi0xLjUgMS43LTEuNSA0LjMgMCAyLjcgMS41IDQuMyAxLjYgMS43IDQuMiAxLjd6bTIwLjUgMTIuN2gtNS40di0yOS4yaDQuMmwxIDMuM3ExLjItMS41IDMuMi0yLjUgMi4xLTEuMiA0LjYtMS4yIDMgMCA1LjMgMS40IDIuMyAxLjQgMy42IDMuOSAxLjMgMi41IDEuMyA1LjYgMCAzLjEtMS4zIDUuNi0xLjMgMi41LTMuNiAzLjktMi4zIDEuNC01LjMgMS40LTIuNCAwLTQuNC0xLTEuOS0xLTMuMi0yLjR6bTYuMi0xMi42cTIuNiAwIDQuMy0xLjcgMS43LTEuNyAxLjctNC40IDAtMi42LTEuNy00LjMtMS43LTEuOC00LjMtMS44LTIuOCAwLTQuNSAxLjgtMS43IDEuNy0xLjcgNC4zIDAgMi43IDEuNyA0LjQgMS43IDEuNyA0LjUgMS43em0zNi4zLTYuNHEwIDAuOC0wLjEgMS43aC0xNi41cTAuNCAyLjIgMS45IDMuNSAxLjYgMS4yIDMuOSAxLjIgMS42IDAgMi44LTAuNiAxLjMtMC42IDItMS42bDUuMSAwLjhxLTEuMSAzLTMuOSA0LjYtMi45IDEuNi02LjMgMS42LTMuMiAwLTUuNy0xLjQtMi41LTEuNC0zLjktMy45LTEuNC0yLjUtMS40LTUuNiAwLTMuMSAxLjQtNS42IDEuNC0yLjUgNC0zLjkgMi41LTEuNCA1LjYtMS40IDMuMiAwIDUuNyAxLjQgMi41IDEuNCAzLjkgMy45IDEuNSAyLjQgMS41IDUuM3ptLTExLjEtNnEtMS44IDAtMy4yIDEtMS40IDEuMS0yIDIuOGgxMC40cS0wLjYtMS43LTItMi44LTEuMy0xLTMuMi0xem0xOS44IDE2LjhoLTUuNHYtMjFoNC4ybDEgMy4xcTEtMS42IDIuNi0yLjUgMS43LTEgMy42LTEgMi4yIDAgNC4xIDEuMiAxLjggMS4xIDIuOSAzLjIgMSAyIDEgNC40djEyLjZoLTUuNHYtMTEuOHEwLTIuMS0xLjItMy40LTEuMi0xLjQtMy0xLjQtMiAwLTMuMiAxLjQtMS4yIDEuMi0xLjIgMy40em0zOC44LTIxbC03LjcgMjFoLTcuM2wtNy42LTIxaDUuN2w1LjIgMTVoMC45bDUuMy0xNXptMTMuNiAxMGw5LjQgMTFoLTYuOGwtNi45LTguMmgtMXY4LjJoLTUuNHYtMjguMmg1LjR2MTUuMmgxbDYuNy04aDYuM3oiLz48L3N2Zz4=");
@@ -1875,4 +1875,26 @@ hr[style="color: #f7f7f7;"]{
 }
 hr {
     background-color: #424242;
+}
+.notification_ballon {
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.notification_ballon notification_title {
+    margin: 12px 16px;
+}
+.notification_ballon wrap {
+    padding: 0 16px 0 16px;
+}
+.messenger-app--input>.ava{
+    display: none;
+}
+.messenger-app--input {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.messenger-app--input textarea{
+    background-color: #292929;
+    height: 45px !important;
 }
