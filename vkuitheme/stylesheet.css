@@ -21,7 +21,22 @@ body {
 .page_body {
     background-color: #222
 }
-
+/* попытка сделать вкшный хедер, кнопки справа мерцают
+.scrolled .page_header{
+    position: fixed;
+    z-index: 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAwAQMAAAAByjnBAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFIiIiKSkpb1F8ywAAAA1JREFUeJxjYKApOAAAASAAwSaHGcAAAAAASUVORK5CYII=) repeat-x!important;
+}
+.scrolled .page_header:before{
+    content: '';
+    display: block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAwAQMAAAAByjnBAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFIiIiKSkpb1F8ywAAAA1JREFUeJxjYKApOAAAASAAwSaHGcAAAAAASUVORK5CYII=) repeat-x!important;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    left: 0;
+}
+*/
 .page_header {
     width: 1076px;
     height: 48px;
@@ -412,7 +427,7 @@ h4, #upload_container h4 {
     opacity: 0
 }
 .header_navigation:hover>.link{
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .header_navigation>.link:nth-child(6),.header_navigation>.link:nth-child(7) {
@@ -503,7 +518,7 @@ form[style="margin-top: -1px;position:relative;"] > #searchInput{
 
 .repost-icon {
     background: url("data:image/svg+xml,%3Csvg height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'%3E%3C/path%3E%3Cpath d='M12 3.73c-1.12.07-2 1-2 2.14v2.12h-.02a9.9 9.9 0 0 0-7.83 10.72.9.9 0 0 0 1.61.46l.19-.24a9.08 9.08 0 0 1 5.84-3.26l.2-.03.01 2.5a2.15 2.15 0 0 0 3.48 1.69l7.82-6.14a2.15 2.15 0 0 0 0-3.38l-7.82-6.13c-.38-.3-.85-.46-1.33-.46zm.15 1.79c.08 0 .15.03.22.07l7.82 6.14a.35.35 0 0 1 0 .55l-7.82 6.13a.35.35 0 0 1-.57-.28V14.7a.9.9 0 0 0-.92-.9h-.23l-.34.02c-2.28.14-4.4.98-6.12 2.36l-.17.15.02-.14a8.1 8.1 0 0 1 6.97-6.53.9.9 0 0 0 .79-.9V5.87c0-.2.16-.35.35-.35z' fill='%23b2b2b2' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")no-repeat 14px -1px !important;
-    width: 26px !important;
+    width: 30px !important;
     padding-right: 10px;
 }
 
@@ -532,6 +547,9 @@ form[style="margin-top: -1px;position:relative;"] > #searchInput{
     margin-top: 3px;
     margin-right: 15px;
     float: left
+}
+.likeCnt:empty{
+    margin-right: 10px;
 }
 
 .post-like-button:has(#liked), .post-like-button:hover:has(#liked) {
