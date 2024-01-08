@@ -5,7 +5,7 @@
 // @description  VKUI Add-on for OpenVK
 // @author       thejenja
 // @match        https://vepurovk.xyz/*
-// @match        https://openvk.su/*
+// @match        https://ovk.to/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openvk.su
 // @grant        none
 // ==/UserScript==
