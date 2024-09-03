@@ -21,10 +21,10 @@ body {
 .page_body {
     background-color: #222
 }
-/* попытка сделать вкшный хедер, кнопки справа мерцают
+
 .scrolled .page_header{
     position: fixed;
-    z-index: 0;
+    z-index: 2;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAwAQMAAAAByjnBAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAZQTFRFIiIiKSkpb1F8ywAAAA1JREFUeJxjYKApOAAAASAAwSaHGcAAAAAASUVORK5CYII=) repeat-x!important;
 }
 .scrolled .page_header:before{
@@ -35,12 +35,20 @@ body {
     height: 48px;
     position: fixed;
     left: 0;
+    z-index: -1
 }
-*/
+
+.scrolled .navigation{
+    position: fixed;
+    width: 164px;
+    top: 58px;
+}
+
 .page_header {
     width: 1076px;
     height: 48px;
-    background: 0 0
+    background: 0 0;
+    transition: .5s
 }
 
 .home_button {
@@ -57,7 +65,8 @@ body {
 
 .sidebar {
     width: 164px;
-    margin: 10px 8px 0 10px
+    margin: 10px 8px 0 10px;
+    transition: .5s;
 }
 
 #wallAttachmentMenu>a,.navigation .link {
@@ -462,6 +471,10 @@ input[type~=search] {
 input[type~=search]::placeholder{
     color: #828282;
 }
+
+input[type~=search]:hover{
+    background-color: #4a4a4a!important;
+}
 .whatFind {
     margin-top: -4px;
     background-color: #222
@@ -694,7 +707,7 @@ h1,h2,p,small,span, label, div, li {
     color: #e1e3e6!important
 }
 p, span, label, td{
-    font-size: 12px;
+    font-size: 13px;
 }
 .ovk-video>.preview,.video-preview {
     width: auto;
