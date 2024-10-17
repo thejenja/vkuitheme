@@ -117,16 +117,16 @@ input[style="width:603px;"], #editor, .monaco-editor, .monaco-editor .overflow-g
 
 input[type=email],input[type=password],input[type=phone],input[type=search],input[type=text],input[type~=email],input[type~=password],input[type~=phone],input[type~=text] {
     width: 100%;
-    padding: 8px 12px;
+    padding: 5px 9px 7px;
     font-size: 13px;
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,.16);
-    background-color: #333;
+    background-color: #292929;
     color: #e1e3e6
 }
 
 input[type~=date],input[type~=search],select,textarea {
-    padding: 8px 12px !important;
+    padding: 5px 9px 7px !important;
     border: 1px solid rgba(255,255,255,.16)
 }
 
@@ -134,8 +134,18 @@ input[type~=date],select,textarea {
     width: 100%;
     font-size: 13px;
     border-radius: 8px;
-    background-color: #333;
+    background-color: #292929;
     color: #e1e3e6
+}
+
+table td[width="120"] .nobold{
+    color: #939393 !important
+}
+
+select{
+    appearance: none;
+    background: #292929 url("data:image/svg+xml,%3Csvg fill='none' height='8' viewBox='0 0 12 8' width='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m2.15553 2.29517c.25255-.32832.72344-.38974 1.05175-.13719l2.79272 2.14824 2.79272-2.14824c.32831-.25255.7992-.19113 1.05175.13719.25253.32831.19113.7992-.13719 1.05175l-3.25 2.5c-.26959.20737-.64497.20737-.91456 0l-3.25-2.5c-.32832-.25255-.38974-.72344-.13719-1.05175z' fill='%23959595' fill-rule='evenodd'/%3E%3C/svg%3E") no-repeat 97%;
+    background-size: 16px 14px
 }
 
 #wallAttachmentMenu>a {
@@ -596,7 +606,19 @@ form[style="margin-top: -1px;position:relative;"] > #searchInput{
 }
 .comment .post-like-button {
     background-color: transparent!important;
-    opacity: 0
+}
+.comment .heart{
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath fill='%23b2b2b2' fill-rule='evenodd' d='M5.0395 3.5C3.6533 3.5 2.5 4.655 2.5 6.117c0 .8585.1494 1.3885.6165 2.0268.5428.7418 1.5177 1.6306 3.331 3.0743L8 12.4539l1.5524-1.2358c1.8135-1.4437 2.7883-2.3325 3.3311-3.0743.4671-.6383.6165-1.1683.6165-2.0269C13.5 4.6551 12.3467 3.5 10.9605 3.5c-.7341 0-1.3022.3348-1.7103.7067-.2266.2066-.4408.4487-.596.7149a.75.75 0 0 1-1.3087-.0007c-.1549-.266-.3687-.508-.595-.7144C6.3429 3.835 5.7749 3.5 5.0395 3.5Zm2.9609-.1682a4.9161 4.9161 0 0 0-.2392-.2336C7.1792 2.5674 6.2669 2 5.0395 2 2.7922 2 1 3.8598 1 6.117c0 1.1223.2208 1.9763.906 2.9127.6781.9267 1.8086 1.93 3.6073 3.3619l1.6541 1.3168a1.3343 1.3343 0 0 0 1.6652 0l1.6541-1.3168c1.7987-1.4319 2.9292-2.4352 3.6073-3.362.6852-.9363.906-1.7904.906-2.9127C15 3.8598 13.2078 2 10.9605 2c-1.2264 0-2.1386.5676-2.7206 1.098a4.9284 4.9284 0 0 0-.2395.2338Z' clip-rule='evenodd'/%3E%3C/svg%3E")no-repeat 5px 2px !important;
+    width: 16px !important;
+    height: 13px !important;
+}
+
+.comment .post-like-button:has(#liked), .comment .post-like-button:hover:has(#liked) {
+    background-color: transparent !important;
+}
+
+.comment #liked{
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath fill='%23ff3347' d='M7.7612 3.0982c.086.0785.1658.1569.2392.2336a4.9284 4.9284 0 0 1 .2395-.2338C8.8219 2.5676 9.734 2 10.9605 2 13.2078 2 15 3.8598 15 6.117c0 1.1223-.2208 1.9763-.906 2.9127-.6781.9267-1.8086 1.93-3.6073 3.3619l-1.6541 1.3168a1.3343 1.3343 0 0 1-1.6652 0l-1.654-1.3168C3.7145 10.9597 2.584 9.9564 1.906 9.0296 1.2208 8.0934 1 7.2393 1 6.117 1 3.8598 2.7922 2 5.0395 2c1.2274 0 2.1396.5674 2.7217 1.0982Z'/%3E%3C/svg%3E")no-repeat 5px 2px !important;
 }
 
 .comment:hover .post-like-button {
@@ -1563,7 +1585,7 @@ div[style="padding: 10px 8px 15px 8px;"]{
     border: 1px solid #dce1e6;
     background-color: #fff;
 }
-    .comment, .post-divider {
+.comment, .post-divider {
     border-color: #dce1e6 !important;
 }
  input[type=email],input[type=password],input[type=phone],input[type=search],input[type=text],input[type~=email],input[type~=password],input[type~=phone],input[type~=text] {
@@ -1577,7 +1599,7 @@ input[type~=date],input[type~=search],select,textarea {
 }
 
 input[type~=date],select,textarea {
-     border: 1px solid #dce1e6;
+    border: 1px solid #dce1e6;
     background-color: #fff;
     color: #000
 }
@@ -1932,8 +1954,10 @@ hr {
     justify-content: center;
 }
 .messenger-app--input textarea{
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.30), 0px 4px 16px 0px rgba(0, 0, 0, 0.30);
+    padding: 12px !important;
+    border: 0;
     background-color: #292929;
-    height: 45px !important;
 }
 body:has(#error){
     background: #3f5d81 !important;
@@ -2007,4 +2031,11 @@ body:has(#error) img{
 img[src="/assets/packages/static/openvk/img/loading_mini.gif"]{
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='4'%3E%3Ccircle cx='2' cy='2' r='2' fill='%23fff'%3E%3Canimate attributeName='opacity' dur='750ms' repeatCount='indefinite' values='0.2;1;0.2'/%3E%3C/circle%3E%3Ccircle cx='8' cy='2' r='2' fill='%23fff'%3E%3Canimate attributeName='opacity' begin='180ms;op.end+180ms' dur='750ms' repeatCount='indefinite' values='0.2;1;0.2'/%3E%3C/circle%3E%3Ccircle cx='14' cy='2' r='2' fill='%23fff'%3E%3Canimate attributeName='opacity' begin='360ms;op.end+360ms' dur='750ms' repeatCount='indefinite' values='0.2;1;0.2'/%3E%3C/circle%3E%3C/svg%3E");
     width: 24px !important;
+}
+
+.msg.msg_succ:before{
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAdVBMVEUAAACq1YCMwnqLwHiLwHiLwHiLwHiKv4CLwHeLwHiKv3eS25KLwHiLv3eLwHiMwHeNwHqNw3mVv4CKwHeLwHeQxHyLwnqKwHeLwHeNv3uOwXeKv3iUyXmZzJmOxoCLwHmZzHeSwnmKv3edxImKwHeLxYCLv3jyUQgSAAAAJ3RSTlMABkeVv9nzGJbx/weC9M5+QSYMx6snLuPeOC3AEwUSZQ8V1A3yFsTwbRJRAAABAklEQVR4AXSRBZKFMBBEB4fG3R3uf8WtTP3F87AuXnzoRFE13TBNQ9dUhd5YtoMDx7Ye2vV8IAijOEniKAwA33Nv3VMgy+kgz4D0MkhRoqrpRl2hbI7+JdqOHnQtSus3f4q2pxd9i9Tl5KHq6IOugscT+Kjpkxq+mMRGRhIy2ESKg/ythnESu4WjkIrg7ecFo/gGUElD+OWXQYQQGumIvvzMKYJOBmKppxgGmUiknhKYZGIVcRqHt6cV2/8UI/9+eJ7it8iBxd3zIo9tsnp43uZxUELePR/UcdTc4uH5qC/F2v+mpqaIHlkEo5tQgiGY5AglWoLJnnDGIZz1CGdegtkfAGxdGKsnOOkPAAAAAElFTkSuQmCC");
+    display: block;
+    float: left;
+    margin-right: 15px;
 }
