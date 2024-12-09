@@ -471,7 +471,6 @@ input[type~=search] {
     background-color: #424242!important;
     padding-left: 32px!important;
     border-radius: 8px;
-    position: absolute;
     margin-left: -882px;
     margin-top: -4px;
     width: 230px!important;
@@ -737,15 +736,15 @@ p, span, label, td{
     box-shadow: none;
     background-color: transparent
 }
-.bigPlayer .paddingLayer .trackPanel {
+.bigPlayer .trackPanel {
     width: 70%;
 }
 .audioEmbed .track > .selectableTrack, .bigPlayer .selectableTrack{
     overflow: hidden
 }
+
 .slider {
   position: relative;
-  overflow: visible;
 }
 
 .slider::before {
@@ -1029,6 +1028,7 @@ center[style="background: white;border: #DEDEDE solid 1px;"]{
 }
 .notifyLink{
     display: flex;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12.004 2.1c4.015 0 6.896 3.278 6.896 7.532v1.6c0 .228.193.531.72 1.075l.27.275c1.082 1.097 1.51 1.729 1.51 2.745 0 .445-.052.791-.268 1.206-.456.878-1.423 1.367-2.869 1.367l-1.912.001c-.629 2.332-2.13 3.6-4.351 3.6-2.245 0-3.754-1.295-4.371-3.675l.019.074H5.737c-1.488 0-2.466-.502-2.902-1.41-.191-.398-.235-.72-.235-1.163 0-1.016.428-1.648 1.51-2.745l.27-.275c.527-.544.72-.847.72-1.076v-1.6C5.1 5.38 7.988 2.1 12.004 2.1Zm2.462 15.802H9.534C9.99 19.148 10.776 19.7 12 19.7c1.224 0 2.01-.552 2.466-1.798ZM12.004 3.9C9.036 3.9 6.9 6.327 6.9 9.632v1.6c0 .852-.39 1.463-1.228 2.328-.073.075-.142.146-.281.286-.747.758-.991 1.118-.991 1.481 0 .192.014.292.057.382.107.224.433.391 1.28.391h12.526c.82 0 1.153-.169 1.272-.397.05-.095.065-.197.065-.376 0-.363-.244-.723-.99-1.48-.14-.141-.209-.212-.282-.287-.839-.865-1.228-1.476-1.228-2.329v-1.6c0-3.307-2.13-5.731-5.096-5.731Z' fill='%237c7c7c'%3E%3C/path%3E%3C/svg%3E") no-repeat 12px 12px;
     position: absolute;
     left: 435px;
     height: 48px;
@@ -1036,8 +1036,9 @@ center[style="background: white;border: #DEDEDE solid 1px;"]{
     align-items: center;
     justify-content: center;
 }
-.musicLink{
+.audioLink{
     display: flex;
+    background: url("data:image/svg+xml,%3Csvg fill='none' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='m16.7162 4.10463c.6096-.12701 1.0097-.20952 1.3164-.24589.2991-.03546.4088-.01239.4569.00393.2039.06929.3763.20943.4857.39498.0258.04371.0707.14637.097.44644.0266.30357.0278.70528.0278 1.31408l-10.20007 2.12501v-.54001c0-.47694.00057-.786.01822-1.02464.01682-.22732.0459-.32732.07278-.38923.08025-.18484.20974-.34409.37433-.46036.05513-.03894.1471-.08779.36621-.15062.23002-.06596.53243-.12955.99943-.22681zm-9.61628 10.99537h-.19989c-1.79486 0-3.1249.4516-4.02097 1.2146-.9023.7683-1.27904 1.7821-1.27904 2.7104 0 1.8639 1.51104 3.375 3.375 3.375.9283 0 1.94206-.3768 2.71034-1.2791.76299-.896 1.21467-2.2261 1.21467-4.0209v-1.1-.9l-.0001-5.11818 10.20007-2.125v5.24318h-.2c-1.7949 0-3.1249.4516-4.021 1.2146-.9023.7683-1.279 1.7821-1.279 2.7104 0 1.8639 1.511 3.375 3.375 3.375.9283 0 1.9421-.3768 2.7103-1.2791.763-.896 1.2147-2.2261 1.2147-4.0209v-1.1-.9-7.05698-.03878c0-.57337 0-1.06154-.0346-1.45721-.0361-.41219-.116-.82434-.3397-1.20377-.3283-.55664-.8454-.97708-1.4573-1.18494-.4171-.14169-.8368-.13578-1.2477-.08706-.3945.04677-.8723.14634-1.4337.26329l-.0379.00791-5.9853 1.24688-.0304.00632c-.42812.08917-.79637.16588-1.09807.25239-.31971.09167-.6244.20995-.9086.41071-.43392.30652-.77531.72635-.98689 1.21366-.13858.31918-.19223.64158-.21678.97328-.02316.31298-.02315.68911-.02314 1.12638v.03109zm8.94608.5851c-.4727.4025-.646.9013-.646 1.3399 0 .8698.7051 1.575 1.575 1.575.4386 0 .9373-.1733 1.3398-.646.4078-.4789.7852-1.3489.7852-2.854v-.2h-.2c-1.5052 0-2.3751.3773-2.854.7851zm-12.64598 3.3399c0-.4386.17326-.9374.64597-1.3399.47892-.4078 1.34888-.7851 2.85404-.7851h.2v.2c0 1.5051-.37737 2.3751-.78516 2.854-.4025.4727-.90124.646-1.33985.646-.86985 0-1.575-.7052-1.575-1.575z' fill='%237c7c7c' fill-rule='evenodd'/%3E%3C/svg%3E") no-repeat 12px 12px;
     position: absolute;
     left: 485px;
     height: 48px;
@@ -1045,7 +1046,7 @@ center[style="background: white;border: #DEDEDE solid 1px;"]{
     align-items: center;
     justify-content: center;
 }
-.notifyLink:hover, .musicLink:hover{
+.notifyLink:hover, .audioLink:hover{
     background-color: rgba(255, 255, 255, 0.08);
 }
 .post-author .delete {
@@ -1715,32 +1716,32 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
     box-shadow: none;
     border-radius: 16px;
 }
-.bigPlayer .paddingLayer .playButtons .playButton {
+.bigPlayer .playButtons .playButton {
     width: 28px;
     height: 28px;
 }
-.bigPlayer .paddingLayer .playButtons .playButton, .audioEntry .playerButton .playIcon {
+.playButtons .playButton, .playerButton .playIcon {
     background-image: none;
     content: url("data:image/svg+xml,%3Csvg fill='none' height='28' viewBox='0 0 28 28' width='28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M28 14a14 14 0 1 1-28 0 14 14 0 0 1 28 0zm-8.98.87c.64-.39.64-1.36 0-1.74l-6.6-4c-.64-.38-1.42.1-1.42.87v8c0 .76.78 1.25 1.41.87z' fill='%23e1e3e6' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
 }
-.bigPlayer .paddingLayer .playButtons .playButton.pause, .audioEntry.nowPlaying .playIcon, .audioEntry .playerButton .playIcon.paused{
+.playButtons .playButton.pause, .audioEntry.nowPlaying .playIcon, .playerButton .playIcon.paused{
     content: url("data:image/svg+xml,%3Csvg fill='none' height='28' viewBox='0 0 28 28' width='28' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath clip-rule='evenodd' d='M28 14a14 14 0 1 1-28 0 14 14 0 0 1 28 0zM10 9.6c0-.33.27-.6.6-.6h1.8c.33 0 .6.27.6.6v8.8a.6.6 0 0 1-.6.6h-1.8a.6.6 0 0 1-.6-.6zm5 0c0-.33.27-.6.6-.6h1.8c.33 0 .6.27.6.6v8.8a.6.6 0 0 1-.6.6h-1.8a.6.6 0 0 1-.6-.6z' fill='%23e1e3e6' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E")
 }
-.bigPlayer .paddingLayer .playButtons .nextButton {
+.bigPlayer .playButtons .nextButton {
     margin-top: 3px;
     width: 20px;
     height: 20px;
     background-image: none;
     content: url("data:image/svg+xml,%3Csvg fill='none' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.75 15c.41 0 .75-.34.75-.75v-3.18l7.12 3.82a.94.94 0 0 0 1.38-.83V5.94a.94.94 0 0 0-1.38-.83L6.5 8.93V5.75a.75.75 0 0 0-1.5 0v8.5c0 .41.34.75.75.75z' fill='%23e1e3e6'%3E%3C/path%3E%3C/svg%3E")
 }
-.bigPlayer .paddingLayer .playButtons .backButton {
+.bigPlayer .playButtons .backButton {
     margin-top: 3px;
     width: 20px;
     height: 20px;
     background-image: none;
     content: url("data:image/svg+xml,%3Csvg fill='none' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.25 5a.75.75 0 0 0-.75.75v3.18L6.38 5.1A.94.94 0 0 0 5 5.94v8.12a.94.94 0 0 0 1.38.83l7.12-3.82v3.18a.75.75 0 0 0 1.5 0v-8.5a.75.75 0 0 0-.75-.75z' fill='%23e1e3e6'%3E%3C/path%3E%3C/svg%3E")
 }
-.bigPlayer .paddingLayer .bigPlayerTip {
+.bigPlayer .bigPlayerTip {
     display: none;
     z-index: 999;
     background: #363738;
@@ -1771,7 +1772,7 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
     background-color: rgba(255, 255, 255, 0.24);
     border-radius: 2.5px;
 }
-.bigPlayer .paddingLayer .slider, .audioEmbed .track .slider {
+.bigPlayer .slider, .audioEmbed .track .slider {
     width: 3px;
     height: 2px;
     background: #fff;
@@ -1817,6 +1818,9 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
 .content_list.long {
     width: 100%;
 }
+.musicIcon, .audioEntry .playerButton .playIcon{
+    background-image: none !important;
+}
 .audioEntry .buttons .musicIcon{
     margin-top: 0;
 }
@@ -1854,19 +1858,19 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
     background-image: none;
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%236f6f6f' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M10 3a.75.75 0 0 1 .75.75v5.5h5.5a.75.75 0 0 1 0 1.5h-5.5v5.5a.75.75 0 0 1-1.5 0v-5.5h-5.5a.75.75 0 0 1 0-1.5h5.5v-5.5A.75.75 0 0 1 10 3Z' clip-rule='evenodd'/%3E%3C/svg%3E")
 }
-.bigPlayer .paddingLayer .additionalButtons .repeatButton {
+.bigPlayer .additionalButtons .repeatButton {
     background-image: none;
     width: 24px;
     height: 24px;
     content: url("data:image/svg+xml,%3Csvg fill='none' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236f6f6f'%3E%3Cpath d='M2 12a5.9 5.9 0 0 1 5.9-5.9h10.03l-.56-.56a.9.9 0 1 1 1.27-1.28l2.1 2.1a.9.9 0 0 1 0 1.28l-2.1 2.1a.9.9 0 0 1-1.27-1.28l.56-.56H7.91A4.1 4.1 0 0 0 3.8 12v.1a.9.9 0 0 1-1.8 0zm19.1-1c.5 0 .9.4.9.9v.1a5.9 5.9 0 0 1-5.9 5.9H6.07l.57.56a.9.9 0 1 1-1.28 1.28l-2.1-2.1a.9.9 0 0 1 0-1.28l2.1-2.1a.9.9 0 0 1 1.28 1.28l-.57.56H16.1a4.1 4.1 0 0 0 4.1-4.1v-.1c0-.5.4-.9.9-.9z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")
 }
-.bigPlayer .paddingLayer .additionalButtons .shuffleButton {
+.bigPlayer .additionalButtons .shuffleButton {
     background-image: none;
     width: 24px;
     height: 24px;
     content: url("data:image/svg+xml,%3Csvg fill='none' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236f6f6f'%3E%3Cpath d='M2.9 6.1a.9.9 0 0 0 0 1.8c2.63 0 4.5 1.61 6.38 3.7-1 1.19-1.95 2.28-2.97 3.11a5.34 5.34 0 0 1-3.4 1.39.9.9 0 0 0 0 1.8c1.78 0 3.26-.76 4.53-1.8 1.1-.88 2.1-2.02 3.04-3.12a25.34 25.34 0 0 0 3.04 3.16A6.98 6.98 0 0 0 18 17.9h.93l-.57.56a.9.9 0 1 0 1.28 1.28l2.1-2.1a.9.9 0 0 0 0-1.28l-2.1-2.1a.9.9 0 1 0-1.28 1.28l.57.56H18a5.2 5.2 0 0 1-3.34-1.36c-1-.81-1.91-1.88-2.92-3.05l-.23-.28C9.4 8.96 6.87 6.1 2.9 6.1zm9.42 2.3A8.84 8.84 0 0 1 18 6.1h.93l-.57-.56a.9.9 0 1 1 1.28-1.28l2.1 2.1a.9.9 0 0 1 0 1.28l-2.1 2.1a.9.9 0 0 1-1.28-1.28l.57-.56H18c-1.72 0-3.22.79-4.52 1.89a.9.9 0 1 1-1.16-1.38z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")
 }
-.bigPlayer .paddingLayer .additionalButtons .deviceButton {
+.bigPlayer .additionalButtons .deviceButton {
     background-image: none;
     width: 24px;
     height: 24px;
@@ -1976,42 +1980,50 @@ body:has(#error) img{
 .topic-list-item {
     border-bottom: #424242 solid 1px;
 }
-.bigPlayer .paddingLayer {
+.verticalGrayTabsWrapper{
+    background-color: transparent;
+    border: 0;
+    width: 200px;
+}
+.bigPlayer {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.bigPlayer .paddingLayer .playButtons{
+.bigPlayer .playButtons{
     order: 1;
 }
-.bigPlayer .paddingLayer .additionalButtons{
+.bigPlayer .additionalButtons{
     order: 2;
 }
-.bigPlayer .paddingLayer .trackPanel{
+.bigPlayer .trackPanel{
     order: 3;
     margin-top: 7px;
 }
-.bigPlayer .paddingLayer .volumePanel{
+.bigPlayer .volumePanel{
     order: 4;
 }
-.bigPlayer .paddingLayer .trackInfo .trackName {
+.bigPlayer .trackInfo .trackName {
     display: flex;
     flex-direction: column-reverse;
-    font-size: 0;
+    height: 35px;
+    font-size: 0
 }
-.bigPlayer .paddingLayer .trackInfo .trackName span{
+.bigPlayer .trackInfo .trackName span{
     font-weight: 500;
 }
-.bigPlayer .paddingLayer .trackInfo .trackName b{
+.bigPlayer .trackInfo .trackName a{
     font-size: 12px;
     font-weight: 400;
     color: #828282;
-    padding-bottom: 5px
+    padding-bottom: 5px;
+    margin-top: -15px;
+    
 }
-.bigPlayer .paddingLayer .trackInfo .timer span{
+.bigPlayer .trackInfo .timer span{
     font-size: 0;
 }
-.bigPlayer .paddingLayer .trackInfo .timer .time{
+.bigPlayer .trackInfo .timer .time{
     font-size: 12px
 }
 .page_yellowheader:has(div[style="float:right;"]){
@@ -2038,4 +2050,23 @@ img[src="/assets/packages/static/openvk/img/loading_mini.gif"]{
     display: block;
     float: left;
     margin-right: 15px;
+}
+.header_navigation .header_divider_stick {
+    background: none;
+}
+.like_tooltip_wrapper {
+    box-shadow: 0px 2px 6px -5px rgba(0, 0, 0, 0.8);
+}
+.like_tooltip_wrapper .like_tooltip_head {
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    padding: 10px 10px 0;
+}
+.like_tooltip_wrapper .like_tooltip_body {
+    background: transparent;
+    border: 0;
+}
+.tippy-box[data-theme~="special"] .tippy-arrow::before {
+    border-top-color: #333;
 }
