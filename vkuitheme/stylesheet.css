@@ -93,7 +93,7 @@ body {
 #wallAttachmentMenu>.header,.content>table td[width="120"],a.link.edit-button, div.left_small_block > br, div.left_small_block > br,.floating_sidebar.show {
     display: none
 }
-#votesBalance, #news {
+#votesBalance, #news, #docs_page_wrapper .docs_page_search, .page_content_paginator_bottom {
     background-color: transparent;
     border: 0
 }
@@ -160,7 +160,7 @@ select{
     width: 110px
 }
 
-#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover, .audioEntry:hover, .attachAudio:hover {
+#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover, .audioEntry:hover, .attachAudio:hover, .comment:hover {
     background-color: rgba(255,255,255,.08)
 }
 
@@ -225,7 +225,7 @@ img[src="/assets/packages/static/openvk/img/oxygen-icons/16x16/apps/amarok.png"]
     background: #e1e3e6;
     color: #222;
 }
-.button[type="submit"]:hover {
+.button[type="submit"] {
     color: #222;
     opacity: .88
 }
@@ -398,9 +398,20 @@ object {
 object>a, object>* {
     padding: 4px 7px;
     background-color: #656565;
-    font-size: 11px;
     font-weight: 700;
     border-radius: 100px
+}
+
+object {
+    display: flex;
+    margin-left: auto;
+    font-size: 0
+}
+object:has(a > b) a{
+    font-size: 0
+}
+object>a, object b{
+    font-size: 11px;
 }
 
 .page_yellowheader {
@@ -474,13 +485,19 @@ input[type~=search] {
     border: 1px solid #3e3e3e;
     background: #424242 url("data:image/svg+xml,%3Csvg fill='none' height='16' viewBox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.50006 1c3.03759 0 5.50004 2.46256 5.50004 5.50029 0 1.24839-.4159 2.39964-1.1166 3.32275l3.8956 3.90026c.2927.2931.2924.768-.0006 1.0607-.2931.2927-.768.2924-1.0607-.0006l-3.89514-3.8995c-.92307.7008-2.07427 1.1167-3.3226 1.1167-3.0376 0-5.50006-2.46258-5.50006-5.50031s2.46246-5.50029 5.50006-5.50029zm0 1.5c-2.20916 0-4.00006 1.79098-4.00006 4.00029 0 2.20932 1.7909 4.00031 4.00006 4.00031 2.20915 0 4.00004-1.79099 4.00004-4.00031 0-2.20931-1.79089-4.00029-4.00004-4.00029z' fill='%23939393'/%3E%3C/svg%3E")no-repeat 9px 7px!important;
     background-color: #424242!important;
-    padding-left: 32px!important;
     border-radius: 8px;
-    margin-left: -882px;
     margin-top: -4px;
-    width: 230px!important;
     height: 32px!important;
     font-size: 13px
+}
+
+.page_header input[type~=search]{
+    width: 230px!important;
+    margin-left: -882px;
+}
+
+#docs_page_wrapper .docs_page_search input[type="search"], .attachment_selector .attachment_search input, .header_navigation #search_box input[type='search']{
+    padding-left: 32px!important;
 }
 input[type~=search]::placeholder{
     color: #828282;
@@ -565,6 +582,9 @@ form[style="margin-top: -1px;position:relative;"] > #searchInput{
     transition-duration: .2s;
     align-items: center;
     border-radius: 100px!important;
+}
+.post-share-button{
+
     margin-left: 10px
 }
 
@@ -717,7 +737,8 @@ select[style="width: 164px;"] {
     box-sizing: border-box;
     opacity: 0;
     -webkit-transition: background-color 200ms linear,opacity 200ms linear;
-    transition: background-color 200ms linear,opacity 200ms linear
+    transition: background-color 200ms linear,opacity 200ms linear;
+    top: 48px;
 }
 
 body.scrolled .toTop:hover {
@@ -736,8 +757,6 @@ p, span, label, td{
     font-size: 13px;
 }
 .ovk-video>.preview,.video-preview {
-    width: auto;
-    height: auto;
     box-shadow: none;
     background-color: transparent
 }
@@ -1380,40 +1399,11 @@ div[style="margin: 6px 10px 10px;border-top: 1px solid #ddd;"]{
 div[style="margin-left: 6px; width: 535px;"]{
     width: 100% !important
 }
-.ovk-photo-view {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
 
-.ovk-photo-details {
-    grid-area: 1 / 4 / 6 / 6; display: flex;
-    overflow: auto;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    padding-left: 25px;
-    overflow-y: hidden
-}
-.ovk-photo-details div{
-    width: 100% !important
-}
 .photo_com_title { grid-area: 6 / 1 / 6 / 4; }
 .ovk-photo-view {
-    display: grid;
     background: #222;
-    width: 60%;
-    height: 93%;
-    box-shadow: none;
-    border-radius: 12px;
     
-}
-.ovk-photo-view center{
-    grid-area: 1 / 1 / 6 / 4; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 #ovk-photo-close{
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQBAMAAADgw5IVAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAADBQTFRFAAAA////////////////////////////////////////////////////////////O00EMAAAABB0Uk5TAFjjbm//bG3+ZV78+1H6+WDtQQEAAABpSURBVHicY2BgVGYAAScBIMEUmgAk2UMVgCRzaCeQnBFqAJLNiFjAwNXaBlbJ2bqRQTpiApjNsDrm7tFdECYD49F3MQJQNsO90LcMCPZfBria/3A1SHqRzUSyC9kNELexgd0GdbORAAMACDQgE7lrMQ0AAAAASUVORK5CYII=);
@@ -1779,7 +1769,7 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
 .bsdn_terebilkaLowerWrap, .bsdn_soundControlSubWrap{
     overflow: hidden
 }
-. {
+.slider {
     width: 3px !important;
     height: 2px !important;
     background: #fff !important;
@@ -1813,7 +1803,7 @@ div[style="position: fixed;z-index: 1007;width: 92%;background: white;margin-top
     transition: 0.1s;
     outline: 0 !important;
 }
-.audioEntry.nowPlaying, .audioEntry.nowPlaying:hover {
+.audioEntry.nowPlaying, .audioEntry.nowPlaying:hover, .playlistListView:hover, .playlistListView .playlistCover {
     background: #333 !important;
 }
 .audioEntry .performer a{
@@ -1913,17 +1903,20 @@ a[href="/about:openvk"]:after{
     grid-template-columns: repeat(3, 200px);
 }
 .playlistContainer .playlistCover {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: flex;
 }
 .playlistCover img {
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 150px;
+    max-height: 150px;
 }
 .playlistContainer .playlistCover img {
-    max-width: 200px;
-    max-height: 200px;
+    width: 150px;
+    height: 150px;
+}
+.playlistBlock .playlistCover{
+    max-width: 150px
 }
 .playlistInfo {
     margin-top: 10px;
@@ -2021,11 +2014,15 @@ body:has(#error) img{
 .bigPlayer .volumePanel{
     order: 4;
 }
+.bigPlayer .trackInfo{
+    height: auto
+}
 .bigPlayer .trackInfo .trackName {
     display: flex;
     flex-direction: column-reverse;
     height: 35px;
-    font-size: 0
+    font-size: 0;
+    line-height: initial
 }
 .bigPlayer .trackInfo .trackName span{
     font-weight: 500;
@@ -2132,4 +2129,47 @@ img[src="/assets/packages/static/openvk/img/loading_mini.gif"]{
 #ctx_menu a:hover, .searchList a:hover, .verticalGrayTabs a:hover {
     background-color: #383838;
     color: #fff !important
+}
+.ovk-album, .ovk-video {
+    display: flex!important;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 2px
+}
+
+.ovk-album>div[style="text-align: center;float: left;height: 54pt;width: 100px;"], .ovk-video img[style="max-width: 170px; max-height: 127px; margin: auto;"], .ovk-video>.preview, .video-preview {
+    width: 220px!important;
+    height: 120px!important;
+    object-fit: cover
+}
+
+.ovk-album img, .ovk-video img {
+    min-width: 100%!important;
+    max-height: 100%!important;
+    object-fit: cover;
+    height: 127px;
+    border-radius: 8px
+}
+
+.ovk-album div:has(b), .ovk-video div:has(b) {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 30%, transparent);
+    position: absolute;
+    width: 200px;
+    padding: 10px;
+    bottom: 0;
+    border-radius: 8px
+}
+
+.ovk-album a {
+    color: #fff;
+    font-size: 13px
+}
+
+.like_wrap{
+    flex-direction: row-reverse;
+    float: left
 }
