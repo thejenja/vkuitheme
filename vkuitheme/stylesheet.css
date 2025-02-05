@@ -173,7 +173,7 @@ select{
     width: 110px
 }
 
-#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover, .audioEntry:hover, .attachAudio:hover, .comment:hover, .container_gray .content:hover {
+#wallAttachmentMenu>a:hover,.bsdn_contextMenuElement:hover, .audioEntry:hover, .attachAudio:hover, .comment:hover, .container_gray .content:hover, .docListViewItem:hover, .attachButton:hover {
     background-color: rgba(255,255,255,.08);
 }
 
@@ -763,7 +763,7 @@ body.scrolled .toTop:hover {
     padding-top: 0
 }
 
-h1,h2,p,small,span, label, div, li {
+h1,h2,p,small,span, label, div, li, .docListViewItem .doc_content b {
     color: #e1e3e6!important
 }
 p, span, label, td{
@@ -2010,7 +2010,7 @@ body:has(#error) img{
     background-image: none;
     content: url("data:image/svg+xml,%3Csvg fill='none' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236f6f6f'%3E%3Cpath clip-rule='evenodd' d='m4 17.75c0-.4142.33579-.75.75-.75h10.5c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-10.5c-.41421 0-.75-.3358-.75-.75z' fill-rule='evenodd'/%3E%3Cpath d='m10.7493 2.72581c0-.40086-.3355-.72581-.74931-.72581-.41385 0-.74933.32495-.74933.72581l-.00001 9.72199-3.97032-3.97029c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l5.24532 5.24533c.2929.2929.76781.2929 1.06071 0l5.2558-5.25585c.2929-.2929.2929-.76777 0-1.06067-.2929-.29289-.7678-.29289-1.0606 0l-3.9716 3.97152z'/%3E%3C/g%3E%3C/svg%3E")
 }
-.topic-list-item, .page_wrap_content_main .def_row_content {
+.topic-list-item, .page_wrap_content_main .def_row_content, .docListViewItem {
     border-bottom: #424242 solid 1px;
 }
 .verticalGrayTabsWrapper{
